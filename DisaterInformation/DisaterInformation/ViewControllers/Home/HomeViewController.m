@@ -173,6 +173,7 @@
 }
 -(void)backButtonClick
 {
+    [(MTSearchBar *)self.navigationItem.titleView resignFirstResponder];
     MeInfoViewController *mifvc  = [[MeInfoViewController alloc]init ];
     [self.navigationController pushViewController:mifvc animated:YES];
 }

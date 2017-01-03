@@ -20,6 +20,7 @@
         self.font =  font14;
         self.placeholder = @"请输入搜索关键字";
         self.borderStyle = UITextBorderStyleRoundedRect;
+        self.returnKeyType = UIReturnKeySearch;
         UIImageView *iconImageView = [[UIImageView alloc]init ];
         iconImageView.image = [UIImage imageNamed:@"search"];
         iconImageView.contentMode = UIViewContentModeCenter;
