@@ -1,0 +1,11 @@
+
+#tform :ios, '8.0'
+inhibit_all_warnings!
+
+target 'DisaterInformation' do
+ 
+pod 'Masonry', '~> 1.0.0'
+pod 'SDAutoLayout', '~> 2.1.1'
+
+end
+
