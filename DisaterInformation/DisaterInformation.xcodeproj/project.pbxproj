@@ -42,6 +42,9 @@
 		718088E81E1B58C90009C503 /* MTSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088E71E1B58C90009C503 /* MTSearchBar.m */; };
 		718088EB1E1B5B930009C503 /* ToolObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088EA1E1B5B930009C503 /* ToolObject.m */; };
 		718088EF1E1B601F0009C503 /* MeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088EE1E1B601F0009C503 /* MeInfoViewController.m */; };
+		718088F21E1BA37B0009C503 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088F11E1BA37B0009C503 /* InformationViewController.m */; };
+		718088F61E1BA4780009C503 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088F41E1BA4780009C503 /* InfoCell.m */; };
+		718088F71E1BA4780009C503 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718088F51E1BA4780009C503 /* InfoCell.xib */; };
 		7182BFA81E01739300BBF0D3 /* RestorationAndReconstructionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFA71E01739300BBF0D3 /* RestorationAndReconstructionVC.m */; };
 		7182BFAC1E01746100BBF0D3 /* EvacuationSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFAB1E01746100BBF0D3 /* EvacuationSitesViewController.m */; };
 		7182BFB01E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFAF1E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m */; };
@@ -154,6 +157,11 @@
 		718088EA1E1B5B930009C503 /* ToolObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolObject.m; sourceTree = "<group>"; };
 		718088ED1E1B601F0009C503 /* MeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeInfoViewController.h; sourceTree = "<group>"; };
 		718088EE1E1B601F0009C503 /* MeInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeInfoViewController.m; sourceTree = "<group>"; };
+		718088F01E1BA37B0009C503 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		718088F11E1BA37B0009C503 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		718088F31E1BA4780009C503 /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
+		718088F41E1BA4780009C503 /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
+		718088F51E1BA4780009C503 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		7182BFA61E01739300BBF0D3 /* RestorationAndReconstructionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestorationAndReconstructionVC.h; path = DisaterInformation/ViewControllers/RestorationAndReconstruction/RestorationAndReconstructionVC.h; sourceTree = SOURCE_ROOT; };
 		7182BFA71E01739300BBF0D3 /* RestorationAndReconstructionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestorationAndReconstructionVC.m; path = DisaterInformation/ViewControllers/RestorationAndReconstruction/RestorationAndReconstructionVC.m; sourceTree = SOURCE_ROOT; };
 		7182BFAA1E01746100BBF0D3 /* EvacuationSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvacuationSitesViewController.h; sourceTree = "<group>"; };
@@ -515,6 +523,8 @@
 			children = (
 				718088ED1E1B601F0009C503 /* MeInfoViewController.h */,
 				718088EE1E1B601F0009C503 /* MeInfoViewController.m */,
+				718088F01E1BA37B0009C503 /* InformationViewController.h */,
+				718088F11E1BA37B0009C503 /* InformationViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -572,6 +582,9 @@
 				71B178821DFCF89000FD77B6 /* MoreTableViewCell.h */,
 				71B178831DFCF89000FD77B6 /* MoreTableViewCell.m */,
 				71B178841DFCF89000FD77B6 /* MoreTableViewCell.xib */,
+				718088F31E1BA4780009C503 /* InfoCell.h */,
+				718088F41E1BA4780009C503 /* InfoCell.m */,
+				718088F51E1BA4780009C503 /* InfoCell.xib */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -745,6 +758,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				711D93311E02B852008D6C41 /* DisasterReliefMaterialInquiryCell.xib in Resources */,
+				718088F71E1BA4780009C503 /* InfoCell.xib in Resources */,
 				7179E2FE1DFBD4EB0058DD27 /* LaunchScreen.storyboard in Resources */,
 				71B178861DFCF89000FD77B6 /* MoreTableViewCell.xib in Resources */,
 				7179E2FB1DFBD4EB0058DD27 /* Assets.xcassets in Resources */,
@@ -839,9 +853,11 @@
 				7182BFA81E01739300BBF0D3 /* RestorationAndReconstructionVC.m in Sources */,
 				712BCD8B1E0AA43F001F4A9A /* ZJSegmentStyle.m in Sources */,
 				71B1789E1DFD043400FD77B6 /* DisasterWarningCell.m in Sources */,
+				718088F61E1BA4780009C503 /* InfoCell.m in Sources */,
 				712BCD881E0AA43F001F4A9A /* ZJCustomLabel.m in Sources */,
 				7179E2F01DFBD4EB0058DD27 /* main.m in Sources */,
 				71B178751DFCE81D00FD77B6 /* UIColor+Extension.m in Sources */,
+				718088F21E1BA37B0009C503 /* InformationViewController.m in Sources */,
 				712BCD851E0AA43F001F4A9A /* UIView+ZJFrame.m in Sources */,
 				711523D71E016E32000E2A42 /* SelfHelpmutualGuideViewController.m in Sources */,
 				712BCDAE1E0ADE55001F4A9A /* VolunteerInquiriesModel.m in Sources */,

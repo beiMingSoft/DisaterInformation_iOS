@@ -129,7 +129,7 @@
 // 分类模块
 -(void)buttonAndId:(NSInteger)index
 {
-    NSInteger tag = index - 1000;
+//    NSInteger tag = index - 1000;
 //    UIViewController *vc = nil;
 //    switch (tag) {
 //        case 0:// 灾害预警

@@ -8,6 +8,7 @@
 //个人中心
 
 #import "MeInfoViewController.h"
+#import "InformationViewController.h"
 static NSString *meCellIde = @"meCell";
 
 @interface MeInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -52,7 +53,7 @@ static NSString *meCellIde = @"meCell";
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:meCellIde];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:meCellIde ];
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:meCellIde ];
     }
     cell.textLabel.text = self.nameArray[indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -67,6 +68,11 @@ static NSString *meCellIde = @"meCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 0) {
+        InformationViewController * ivc = [[InformationViewController alloc]init ];
+        [self.navigationController pushViewController:ivc animated:true];
+        
+    }
 }
 
 
@@ -82,6 +88,9 @@ static NSString *meCellIde = @"meCell";
 {
     return GMLAYOUTRATE(150);
 }
+
+
+
 
 
 
