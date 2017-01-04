@@ -1,0 +1,18 @@
+PODS:
+  - IQKeyboardManager (4.0.8)
+  - Masonry (1.0.2)
+  - SDAutoLayout (2.1.7)
+
+DEPENDENCIES:
+  - IQKeyboardManager (~> 4.0.8)
+  - Masonry (~> 1.0.0)
+  - SDAutoLayout (~> 2.1.1)
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: 1a8189fa153bf09044355ee0ad36826f6767e7f7
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  SDAutoLayout: e9b36d04b8c0b504762a04d76fbbe5108944297a
+
+PODFILE CHECKSUM: e3fd789b583619f300440229c47f7f3551c9c226
+
+COCOAPODS: 1.1.1

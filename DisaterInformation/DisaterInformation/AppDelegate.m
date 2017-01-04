@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "HomeViewController.h"
 #import "CustomNaviViewController.h"
+#import "IQKeyboardManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,11 +25,20 @@
     HomeViewController *hvc = [[HomeViewController alloc]init ];
     CustomNaviViewController *na = [[CustomNaviViewController alloc]initWithRootViewController:hvc ];
     self.window.rootViewController = na;
+
+    [self setupHideKeyboard];
     [self.window makeKeyAndVisible];
     
     return YES;
 }
 
+- (void)setupHideKeyboard {
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = NO;
+    manager.enableAutoToolbar = NO;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
