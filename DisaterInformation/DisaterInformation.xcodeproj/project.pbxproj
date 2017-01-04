@@ -45,6 +45,7 @@
 		718088F21E1BA37B0009C503 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088F11E1BA37B0009C503 /* InformationViewController.m */; };
 		718088F61E1BA4780009C503 /* InfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088F41E1BA4780009C503 /* InfoCell.m */; };
 		718088F71E1BA4780009C503 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718088F51E1BA4780009C503 /* InfoCell.xib */; };
+		718088FD1E1CA7DE0009C503 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 718088FC1E1CA7DE0009C503 /* HomeDetailViewController.m */; };
 		7182BFA81E01739300BBF0D3 /* RestorationAndReconstructionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFA71E01739300BBF0D3 /* RestorationAndReconstructionVC.m */; };
 		7182BFAC1E01746100BBF0D3 /* EvacuationSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFAB1E01746100BBF0D3 /* EvacuationSitesViewController.m */; };
 		7182BFB01E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFAF1E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m */; };
@@ -162,6 +163,8 @@
 		718088F31E1BA4780009C503 /* InfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoCell.h; sourceTree = "<group>"; };
 		718088F41E1BA4780009C503 /* InfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoCell.m; sourceTree = "<group>"; };
 		718088F51E1BA4780009C503 /* InfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
+		718088FB1E1CA7DE0009C503 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		718088FC1E1CA7DE0009C503 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		7182BFA61E01739300BBF0D3 /* RestorationAndReconstructionVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestorationAndReconstructionVC.h; path = DisaterInformation/ViewControllers/RestorationAndReconstruction/RestorationAndReconstructionVC.h; sourceTree = SOURCE_ROOT; };
 		7182BFA71E01739300BBF0D3 /* RestorationAndReconstructionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestorationAndReconstructionVC.m; path = DisaterInformation/ViewControllers/RestorationAndReconstruction/RestorationAndReconstructionVC.m; sourceTree = SOURCE_ROOT; };
 		7182BFAA1E01746100BBF0D3 /* EvacuationSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EvacuationSitesViewController.h; sourceTree = "<group>"; };
@@ -514,6 +517,8 @@
 				71B1786A1DFCE34800FD77B6 /* HomeViewController.m */,
 				71B1787F1DFCF85E00FD77B6 /* MoreInformationViewController.h */,
 				71B178801DFCF85E00FD77B6 /* MoreInformationViewController.m */,
+				718088FB1E1CA7DE0009C503 /* HomeDetailViewController.h */,
+				718088FC1E1CA7DE0009C503 /* HomeDetailViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -839,6 +844,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718088FD1E1CA7DE0009C503 /* HomeDetailViewController.m in Sources */,
 				718088EB1E1B5B930009C503 /* ToolObject.m in Sources */,
 				712BCD871E0AA43F001F4A9A /* ZJContentView.m in Sources */,
 				7182BFAC1E01746100BBF0D3 /* EvacuationSitesViewController.m in Sources */,

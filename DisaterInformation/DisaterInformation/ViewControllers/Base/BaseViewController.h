@@ -10,4 +10,7 @@
 
 @interface BaseViewController : UIViewController
 
+
+- (NSString *)updateTimeForRow:(NSString *)str;
+
 @end

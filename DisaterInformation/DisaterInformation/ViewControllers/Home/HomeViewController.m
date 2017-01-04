@@ -22,6 +22,7 @@
 #import "MTSearchBar.h"
 #import "ToolObject.h"
 #import "MeInfoViewController.h"
+#import "HomeDetailViewController.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,sendActionAndIndexDelegate>
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *homeDataArray;
@@ -57,24 +58,34 @@
     
     [self createData];
     [self.view addSubview:self.tableView];
+    self.tableView.showsHorizontalScrollIndicator = NO;
+    self.tableView.showsVerticalScrollIndicator = NO;
 }
 
 //z制造假数据
 -(void)createData{
 
-    for (int i =0 ; i< 10; i++) {
+    for (int i =0 ; i< 3; i++) {
         HomeModel *model = [[HomeModel alloc]init ];
-        model.mainTitle = @"地震灾害的由来";
-        model.descriptionTitle = @"地震时如何产生的，地震的形成过程是什么";
+        if (i == 0) {
+            model.mainTitle = @"地震小知识";
+            model.descriptionTitle = @"地震时如何产生的，地震的形成过程是什么";
+        }else if (i == 1){
+            model.mainTitle = @"地震逃生技巧";
+            model.descriptionTitle = @"在地震来临时，我们如何保护好自己";
+        }else{
+            model.mainTitle = @"地震自救互助";
+            model.descriptionTitle = @"地震发生时我们如何自救和帮助他人";
+        }
+        model.news_id = i;
         model.browseNumber = 111;
         model.collectionNumber = 111;
         model.likeNumber = 111;
+        
         [self.homeDataArray addObject:model];
     }
 
 }
-
-
 
 #pragma mark --- UITableViewDelegate，UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -107,7 +118,7 @@
     NSArray *titleArr = @[@"灾害预警",@"自救互助",@"灾害科普",@"灾害风险",@"恢复重建",@"避难场所",@"救灾物质查询",@"志愿者查询"];
     NSArray *imageArr =@[@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel"];
     
-    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), DEVICE_WIDTH, GMLAYOUTRATE(255)) city:nil cityName:nil imageArray:imageArr titleArray:titleArr spots:@"自然灾害" moreTitle:@"查看更多"];
+    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), DEVICE_WIDTH, GMLAYOUTRATE(255)) city:nil cityName:nil imageArray:imageArr titleArray:titleArr spots:@"自然灾害" moreTitle:@"查看更多" ColCount:4];
     chv.backgroundColor = [UIColor whiteColor];
     chv.delegate = self;
     [headView addSubview:chv];
@@ -121,10 +132,26 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return  GMLAYOUTRATE(100);
+    MMLog(@"%f",GMLAYOUTRATE(100))
+//    return  GMLAYOUTRATE(100);
+
+    return 100;
+    
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.1;
+}
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    HomeModel *model = self.homeDataArray[indexPath.row];
+    HomeDetailViewController *hvc = [[HomeDetailViewController alloc]init ];
+    hvc.news_Id = model.news_id;
+    hvc.title = model.mainTitle;
+    [self.navigationController pushViewController:hvc animated:YES];
+    
 }
 
 
@@ -136,7 +163,6 @@
     switch (tag) {
         case 0:// 灾害预警
             vc = [[DisasterWarningViewController alloc]init];
-            
             break;
         case 1://自救互助
             vc = [[SelfHelpmutualGuideViewController alloc]init ];
@@ -165,7 +191,6 @@
         case 7://志愿者
             vc = [[VolunteerInquiriesViewController alloc]init ];
             break;
-            
         default:
             break;
     }

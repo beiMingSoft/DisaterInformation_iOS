@@ -39,6 +39,7 @@ static NSString *meCellIde = @"meCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"个人中心";
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc]init ];
 }

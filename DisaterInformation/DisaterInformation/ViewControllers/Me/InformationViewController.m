@@ -9,7 +9,6 @@
 #import "InformationViewController.h"
 #import "InfoCell.h"
 
-
 static NSString *InforCell = @"cellIde";
 
 @interface InformationViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -36,6 +35,8 @@ static NSString *InforCell = @"cellIde";
     [super viewDidLoad];
     self.title = @"消息";
     [self.view addSubview:self.tableView];
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.showsHorizontalScrollIndicator = NO;
     self.tableView.tableFooterView = [[UIView alloc]init ];
 }
 
@@ -54,6 +55,7 @@ static NSString *InforCell = @"cellIde";
     }
     cell.titleLabel.text = @"什么是热带风暴（Tropicalstorm）？";
     cell.descriptionLabel.text = @"热带风暴是所有自然灾害中最具破坏力的.每年飓风都从海洋横扫至内陆地区.强劲的风力和暴风雨过后留下的只是一片狼藉。";
+    cell.timeLabel.text = [self updateTimeForRow:@"1483493403"];
     return cell;
 }
 
@@ -67,7 +69,6 @@ static NSString *InforCell = @"cellIde";
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
 
 
 @end

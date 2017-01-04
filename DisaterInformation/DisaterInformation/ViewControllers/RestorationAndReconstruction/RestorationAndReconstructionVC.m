@@ -59,14 +59,10 @@
 
 
 - (UIViewController<ZJScrollPageViewChildVcDelegate> *)childViewController:(UIViewController<ZJScrollPageViewChildVcDelegate> *)reuseViewController forIndex:(NSInteger)index {
-    
     UIViewController<ZJScrollPageViewChildVcDelegate> *childVc = reuseViewController;
-    
     if (!childVc) {
         childVc = [[RestorationListViewController alloc] init];
     }
-    
-    
     if (index%2==0) {
         childVc.view.backgroundColor = [UIColor blueColor];
     } else {

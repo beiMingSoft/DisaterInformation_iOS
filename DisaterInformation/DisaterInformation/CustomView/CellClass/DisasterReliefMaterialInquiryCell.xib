@@ -90,7 +90,7 @@
                 <outlet property="checkTimeLabel" destination="I6q-4F-QOs" id="mAb-oT-Fqq"/>
                 <outlet property="numberLabel" destination="71Z-2N-kEV" id="4ZI-DD-g1O"/>
             </connections>
-            <point key="canvasLocation" x="33" y="47.5"/>
+            <point key="canvasLocation" x="-42" y="29"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -119,7 +119,7 @@ static NSString *secondIde = @"Scell";
 {
     
     UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(250)) ];
-    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(250)) city:nil cityName:nil imageArray:self.imageArr titleArray:self.titleArray spots:@"自然灾害" moreTitle:nil ];
+    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(250)) city:nil cityName:nil imageArray:self.imageArr titleArray:self.titleArray spots:@"自然灾害" moreTitle:nil  ColCount:4];
     chv.backgroundColor = [UIColor whiteColor];
     chv.delegate = self;
     [headView addSubview:chv];
@@ -143,9 +143,9 @@ static NSString *secondIde = @"Scell";
 -(void)buttonAndId:(NSInteger)index
 {
     
-    UIViewController *vc = nil;
-    NSInteger tag =  index - 1000;
-    
+//    UIViewController *vc = nil;
+//    NSInteger tag =  index - 1000;
+//    
 }
 
 

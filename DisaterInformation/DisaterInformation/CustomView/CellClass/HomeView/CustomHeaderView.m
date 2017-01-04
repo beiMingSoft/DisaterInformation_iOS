@@ -31,12 +31,12 @@
  @param mTitle     section check more
 
  */
--(instancetype)initWithFrame:(CGRect)frame city:(NSString *)city cityName:(NSString *)cityName imageArray:(NSArray *)imgArray titleArray:(NSArray *)titleArr spots:(NSString *)spotsTitle moreTitle:(NSString *)mTitle
+-(instancetype)initWithFrame:(CGRect)frame city:(NSString *)city cityName:(NSString *)cityName imageArray:(NSArray *)imgArray titleArray:(NSArray *)titleArr spots:(NSString *)spotsTitle moreTitle:(NSString *)mTitle ColCount:(NSInteger)col
 {
     self = [super initWithFrame:frame];
     if (self) {
         // 九宫格
-        int totalloc=4;
+        NSInteger totalloc=col;
         CGFloat appvieww = GMLAYOUTRATE(78.5);
         CGFloat appviewh = GMLAYOUTRATE(78.5);
         CGFloat margin = (DEVICE_WIDTH-totalloc*appvieww)/(totalloc+1);
@@ -101,20 +101,19 @@
             make.right.equalTo(@-10);
             make.size.mas_equalTo(CGSizeMake(GMLAYOUTRATE(100), 20));
         }];
-        //热门景点分割线
         UIView *sqliteView = [[UIView alloc]init ];
         sqliteView.backgroundColor = [UIColor colorWithRGBString:COLOR_LINEVIEW_F0F0F];
 //        sqliteView.backgroundColor = [UIColor purpleColor];
         
-        [self addSubview:sqliteView];
-        [sqliteView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(moreBtn.mas_bottom).offset(GMLAYOUTRATE(6));
-            make.left.equalTo(@0);
-            make.width.offset(DEVICE_WIDTH);
-            make.height.offset(1);
-            
-        }];
-        
+//        [self addSubview:sqliteView];
+//        [sqliteView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(moreBtn.mas_bottom).offset(GMLAYOUTRATE(6));
+//            make.left.equalTo(@0);
+//            make.width.offset(DEVICE_WIDTH);
+//            make.height.offset(1);
+//            
+//        }];
+//        
         NSLog(@"%f",CGRectGetMaxY(sqliteView.frame));
         
     }

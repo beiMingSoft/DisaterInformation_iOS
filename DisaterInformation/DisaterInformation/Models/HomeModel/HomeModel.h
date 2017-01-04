@@ -40,6 +40,8 @@
  */
 @property(nonatomic ,assign)NSInteger likeNumber;
 
+//id
+@property(nonatomic ,assign)NSInteger news_id;
 
 
 @end

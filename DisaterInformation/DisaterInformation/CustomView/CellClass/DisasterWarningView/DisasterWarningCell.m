@@ -38,9 +38,6 @@
         model.cellHeight = 90;
 
     }
-
-
-    self.timeLabel.text = model.time;
     self.fromLabel.text = model.from;
 
     // 强制布局
