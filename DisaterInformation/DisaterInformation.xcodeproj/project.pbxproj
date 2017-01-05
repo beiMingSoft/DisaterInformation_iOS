@@ -67,6 +67,10 @@
 		71B1789E1DFD043400FD77B6 /* DisasterWarningCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B1789C1DFD043400FD77B6 /* DisasterWarningCell.m */; };
 		71B1789F1DFD043400FD77B6 /* DisasterWarningCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B1789D1DFD043400FD77B6 /* DisasterWarningCell.xib */; };
 		71B178A31DFD046600FD77B6 /* DisasterWarningModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B178A21DFD046600FD77B6 /* DisasterWarningModel.m */; };
+		71CF305B1E1E377D00A6FE2F /* disstance.html in Resources */ = {isa = PBXBuildFile; fileRef = 71CF305A1E1E377D00A6FE2F /* disstance.html */; };
+		71CF305E1E1E37CD00A6FE2F /* u13.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF305D1E1E37CD00A6FE2F /* u13.png */; };
+		71CF30601E1E427700A6FE2F /* PlaceOfRefuge.html in Resources */ = {isa = PBXBuildFile; fileRef = 71CF305F1E1E427700A6FE2F /* PlaceOfRefuge.html */; };
+		71CF30621E1E428100A6FE2F /* u17.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF30611E1E428100A6FE2F /* u17.png */; };
 		AD647F1A0A48907814AD7DA8 /* libPods-DisaterInformation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD91096AC71C7B11073D /* libPods-DisaterInformation.a */; };
 /* End PBXBuildFile section */
 
@@ -204,6 +208,10 @@
 		71B1789D1DFD043400FD77B6 /* DisasterWarningCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisasterWarningCell.xib; sourceTree = "<group>"; };
 		71B178A11DFD046600FD77B6 /* DisasterWarningModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisasterWarningModel.h; sourceTree = "<group>"; };
 		71B178A21DFD046600FD77B6 /* DisasterWarningModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisasterWarningModel.m; sourceTree = "<group>"; };
+		71CF305A1E1E377D00A6FE2F /* disstance.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = disstance.html; sourceTree = "<group>"; };
+		71CF305D1E1E37CD00A6FE2F /* u13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u13.png; sourceTree = "<group>"; };
+		71CF305F1E1E427700A6FE2F /* PlaceOfRefuge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PlaceOfRefuge.html; sourceTree = "<group>"; };
+		71CF30611E1E428100A6FE2F /* u17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u17.png; sourceTree = "<group>"; };
 		73A36C2EA6FEA6DC3549E1A8 /* Pods-DisaterInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisaterInformation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DisaterInformation/Pods-DisaterInformation.debug.xcconfig"; sourceTree = "<group>"; };
 		771CFD91096AC71C7B11073D /* libPods-DisaterInformation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DisaterInformation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BD1BD986116BD5D5CB60E6 /* Pods-DisaterInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisaterInformation.release.xcconfig"; path = "Pods/Target Support Files/Pods-DisaterInformation/Pods-DisaterInformation.release.xcconfig"; sourceTree = "<group>"; };
@@ -513,6 +521,9 @@
 		7179E3291DFBD67C0058DD27 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				71CF305A1E1E377D00A6FE2F /* disstance.html */,
+				71CF305F1E1E427700A6FE2F /* PlaceOfRefuge.html */,
+				71CF305C1E1E37CD00A6FE2F /* images */,
 				71B178691DFCE34800FD77B6 /* HomeViewController.h */,
 				71B1786A1DFCE34800FD77B6 /* HomeViewController.m */,
 				71B1787F1DFCF85E00FD77B6 /* MoreInformationViewController.h */,
@@ -631,6 +642,15 @@
 				71B178A21DFD046600FD77B6 /* DisasterWarningModel.m */,
 			);
 			path = DisasterWarningModel;
+			sourceTree = "<group>";
+		};
+		71CF305C1E1E37CD00A6FE2F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				71CF305D1E1E37CD00A6FE2F /* u13.png */,
+				71CF30611E1E428100A6FE2F /* u17.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 		7627F404F4A0065F74553512 /* Frameworks */ = {
@@ -765,12 +785,16 @@
 				711D93311E02B852008D6C41 /* DisasterReliefMaterialInquiryCell.xib in Resources */,
 				718088F71E1BA4780009C503 /* InfoCell.xib in Resources */,
 				7179E2FE1DFBD4EB0058DD27 /* LaunchScreen.storyboard in Resources */,
+				71CF30621E1E428100A6FE2F /* u17.png in Resources */,
+				71CF305E1E1E37CD00A6FE2F /* u13.png in Resources */,
 				71B178861DFCF89000FD77B6 /* MoreTableViewCell.xib in Resources */,
+				71CF30601E1E427700A6FE2F /* PlaceOfRefuge.html in Resources */,
 				7179E2FB1DFBD4EB0058DD27 /* Assets.xcassets in Resources */,
 				71B1787A1DFCEE4900FD77B6 /* HomeCell.xib in Resources */,
 				712BCDAA1E0AD78B001F4A9A /* VolunteerInquiriesCell.xib in Resources */,
 				712BCDA01E0AA8C4001F4A9A /* TestCell.xib in Resources */,
 				7179E2F91DFBD4EB0058DD27 /* Main.storyboard in Resources */,
+				71CF305B1E1E377D00A6FE2F /* disstance.html in Resources */,
 				71B1789F1DFD043400FD77B6 /* DisasterWarningCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

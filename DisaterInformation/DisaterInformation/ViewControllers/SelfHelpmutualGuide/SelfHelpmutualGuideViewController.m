@@ -57,17 +57,67 @@
     
     self.secontionTitles = [[NSMutableArray alloc]init ];
 
-    for (int i =0 ; i< 3; i++) {
-        [self.secontionTitles addObject:@"台风"];
+    for (int i =0 ; i< 5; i++) {
         DisasterWarningModel * model = [[DisasterWarningModel alloc]init ];
-        model.mainTitle = @"地震逃生技巧";
-        model.time = @"10分钟";
-        model.from = @"国家减灾救灾网";
+    
         if (i == 0) {
-            model.urlStr = @"disater";
-            model.isPic = YES;
+//            model.urlStr = @"disater";
+//            model.isPic = YES;
+            [self.secontionTitles addObject:@"地震"];
+            model.mainTitle = @"地震逃生技巧";
+            model.time = @"10分钟";
+            model.from = @"国家减灾救灾网";
+            model.news_Id = i + 1000;
+            NSMutableArray *arr = [[NSMutableArray alloc]init ];
+            [arr addObject:model];
+            [self.homeDataArray addObject:arr];
+
+        }else if( i == 1){
+            [self.secontionTitles addObject:@"洪水"];
+            model.mainTitle = @"洪水逃生技巧";
+            model.time = @"10分钟";
+            model.from = @"国家减灾救灾网";
+            model.news_Id = i + 1000;
+
+            NSMutableArray *arr = [[NSMutableArray alloc]init ];
+            [arr addObject:model];
+            [self.homeDataArray addObject:arr];
+
+        }else if( i == 2){
+            [self.secontionTitles addObject:@"滑坡"];
+            model.mainTitle = @"滑坡逃生技巧";
+            model.time = @"10分钟";
+            model.from = @"国家减灾救灾网";
+            model.news_Id = i + 1000;
+
+            NSMutableArray *arr = [[NSMutableArray alloc]init ];
+            [arr addObject:model];
+            [self.homeDataArray addObject:arr];
+
+            
+        }else if( i == 3){
+            
+            [self.secontionTitles addObject:@"台风"];
+            model.mainTitle = @"台风逃生技巧";
+            model.time = @"10分钟";
+            model.from = @"国家减灾救灾网";
+            model.news_Id = i + 1000;
+            NSMutableArray *arr = [[NSMutableArray alloc]init ];
+            [arr addObject:model];
+            [self.homeDataArray addObject:arr];
+
+        }else if( i == 4){
+            [self.secontionTitles addObject:@"火灾"];
+            model.mainTitle = @"家庭火灾逃生技巧";
+            model.time = @"10分钟";
+            model.from = @"国家减灾救灾网";
+            model.news_Id = i + 1000;
+            NSMutableArray *arr = [[NSMutableArray alloc]init ];
+            [arr addObject:model];
+            [self.homeDataArray addObject:arr];
+
         }
-        [self.homeDataArray addObject:model];
+    
     }
     
     
@@ -78,7 +128,7 @@
 #pragma mark --- UITableViewDelegate，UITableViewDataSource
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return  self.homeDataArray.count;
+    return  [self.homeDataArray[section] count];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -88,7 +138,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DisasterWarningCell *cell = [tableView dequeueReusableCellWithIdentifier:@"warningCell"];
-    DisasterWarningModel *model = self.homeDataArray[indexPath.row];
+    DisasterWarningModel *model = self.homeDataArray[indexPath.section][indexPath.row];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"DisasterWarningCell" owner:self options:nil]lastObject];
     }
@@ -101,7 +151,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    DisasterWarningModel *model = self.homeDataArray[indexPath.row];
+    DisasterWarningModel *model = self.homeDataArray[indexPath.section][indexPath.row];
     return model.cellHeight;
     
 }
@@ -118,13 +168,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    DisasterWarningModel *model = self.homeDataArray[indexPath.section][indexPath.row];
     HomeDetailViewController *hvc = [[HomeDetailViewController alloc]init ];
-    hvc.news_Id = 1;
+    hvc.news_Id = model.news_Id;
+    hvc.title = model.mainTitle;
     [self.navigationController pushViewController:hvc animated:YES];
-
 }
 
 @end

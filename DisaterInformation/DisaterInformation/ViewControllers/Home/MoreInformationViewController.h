@@ -6,8 +6,8 @@
 //  Copyright © 2016年 wasterd. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface MoreInformationViewController : UIViewController
+@interface MoreInformationViewController : BaseViewController
 
 @end

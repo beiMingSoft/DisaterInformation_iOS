@@ -26,11 +26,23 @@
 -(void)createImageView
 {
    imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 64, DEVICE_WIDTH, DEVICE_HEIGHT - 64) ];
-    if (self.news_Id == 0) {
+    if (self.news_Id == 0 ) {
         imageView.image = [UIImage imageNamed:@"Earthquake knowledge_icon"];
 
-    }else if( self.news_Id == 1){
+    }else if( self.news_Id == 1|| self.news_Id == 1000){
         imageView.image = [UIImage imageNamed:@"Earthquake_escape_icon"];
+    }else if (self.news_Id == 1001){
+        imageView.image = [UIImage imageNamed:@"Flood_icon"];
+
+    }else if (self.news_Id == 1002){
+        imageView.image = [UIImage imageNamed:@"landslide_icon"];
+
+    }else if (self.news_Id == 1003){
+        imageView.image = [UIImage imageNamed:@"Typhoon_icon"];
+
+    }else if (self.news_Id == 1004){
+        imageView.image = [UIImage imageNamed:@"FamilyFire_icon"];
+
     }else{
         imageView.image = [UIImage imageNamed:@"Earthquake_saveSelfHelpearchother"];
     }

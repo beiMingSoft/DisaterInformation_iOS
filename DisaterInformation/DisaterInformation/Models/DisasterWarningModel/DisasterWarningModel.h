@@ -32,9 +32,15 @@
 
 
 /**
+ * id
+ */
+@property(nonatomic ,assign)NSInteger news_Id;
+
+/**
  * 是否有封面图
  */
 @property(nonatomic ,assign)BOOL isPic;
+
 
 @property (nonatomic, assign) CGFloat cellHeight;
 

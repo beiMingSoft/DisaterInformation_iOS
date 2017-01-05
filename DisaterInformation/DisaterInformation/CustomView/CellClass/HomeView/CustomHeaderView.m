@@ -79,7 +79,7 @@
         headLabel.textColor = [UIColor colorWithRGBString:COLOR_SPOTTITLE_111111];
         [self addSubview:headLabel];
         [headLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(lineView.mas_bottom).offset(5);
+            make.top.equalTo(lineView.mas_bottom).offset(10);
             make.left.equalTo(@12);
             make.right.equalTo(@-10);
             make.height.equalTo(@20);

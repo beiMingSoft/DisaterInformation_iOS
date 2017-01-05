@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import "ToolObject.h"
 @interface BaseViewController ()
 
 @end
@@ -16,9 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
 
+    self.navigationItem.leftBarButtonItem = [ToolObject backBarButtonWithImageName:@"nav_back" select:@selector(back) target:self];
+}
+-(void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 - (NSString *)updateTimeForRow:(NSString *)str
@@ -60,6 +64,9 @@
     NSInteger years = time/3600/24/30/12;
     return [NSString stringWithFormat:@"%ld年前",years];
 }
+
+
+
 
 
 @end

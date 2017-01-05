@@ -11,7 +11,8 @@
 
 float layoutRateByHeight(float orginLayout){
     
-    if (DEVICE_HEIGHT > 667) {
+    //以5 为准
+    if (DEVICE_HEIGHT  == 568) {
         return 1 * orginLayout;
     } else if (DEVICE_HEIGHT > 568) {
         return 1 * orginLayout;

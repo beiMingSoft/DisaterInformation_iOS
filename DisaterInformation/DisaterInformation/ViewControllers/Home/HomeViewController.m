@@ -23,9 +23,11 @@
 #import "ToolObject.h"
 #import "MeInfoViewController.h"
 #import "HomeDetailViewController.h"
-@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,sendActionAndIndexDelegate>
+
+@interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,sendActionAndIndexDelegate,UITextFieldDelegate>
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *homeDataArray;
+@property(nonatomic ,strong)UITextField *textField;
 @end
 
 @implementation HomeViewController
@@ -51,8 +53,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self createSearchView];
+    self.title = @"灾害信息服务";
     
-    self.navigationItem.titleView = [MTSearchBar searchBar];
     //设置左导航按钮
     self.navigationItem.rightBarButtonItem = [ToolObject backBarButtonWithImageName:@"main_me_icon_unselected" select:@selector(backButtonClick) target:self];
     
@@ -62,7 +65,27 @@
     self.tableView.showsVerticalScrollIndicator = NO;
 }
 
-//z制造假数据
+-(void)createSearchView
+{
+     self.textField.size = CGSizeMake(GMLAYOUTRATE(DEVICE_WIDTH - 80), 30);
+     self.textField.font =  font14;
+     self.textField.backgroundColor = [UIColor redColor];
+     self.textField.placeholder = @"请输入搜索关键字";
+     self.textField.borderStyle = UITextBorderStyleRoundedRect;
+    UIImageView *iconImageView = [[UIImageView alloc]init ];
+    iconImageView.image = [UIImage imageNamed:@"search"];
+    iconImageView.contentMode = UIViewContentModeCenter;
+    iconImageView.size = CGSizeMake(30, 30);
+     self.textField.leftView = iconImageView;
+     self.textField.leftViewMode = UITextFieldViewModeAlways;
+     self.textField.layer.cornerRadius = 15;
+     self.textField.layer.masksToBounds = YES;
+     self.textField.delegate = self;
+     self.textField.returnKeyType = UIReturnKeyDone;
+     self.navigationItem.titleView = self.textField;
+}
+
+//制造假数据
 -(void)createData{
 
     for (int i =0 ; i< 3; i++) {
@@ -145,6 +168,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    MTSearchBar *search = [[MTSearchBar alloc]init ];
+    search.delegate = self;
+    [search resignFirstResponder];
+    
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HomeModel *model = self.homeDataArray[indexPath.row];
     HomeDetailViewController *hvc = [[HomeDetailViewController alloc]init ];
@@ -158,6 +186,11 @@
 // 分类模块
 -(void)buttonAndId:(NSInteger)index
 {
+    
+    MTSearchBar *search = [[MTSearchBar alloc]init ];
+    search.delegate = self;
+    [search resignFirstResponder];
+    
     NSInteger tag = index - 1000;
     UIViewController *vc = nil;
     switch (tag) {

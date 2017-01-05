@@ -10,7 +10,13 @@
  */
 #import "MTSearchBar.h"
 
+@interface MTSearchBar ()<UITextFieldDelegate>
+
+
+@end
+
 @implementation MTSearchBar
+
 -(instancetype)initWithFrame:(CGRect)frame
 {
     
@@ -28,8 +34,16 @@
         self.leftViewMode = UITextFieldViewModeAlways;
         self.layer.cornerRadius = 15;
         self.layer.masksToBounds = YES;
+        self.delegate = self;
+        self.returnKeyType = UIReturnKeyDone;
     }
     return self;
+}
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+
+    [self resignFirstResponder];
+    return YES;
 }
 
 +(instancetype)searchBar

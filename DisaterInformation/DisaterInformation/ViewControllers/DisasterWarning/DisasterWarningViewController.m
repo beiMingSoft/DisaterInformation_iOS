@@ -61,16 +61,16 @@
             model.time = @"1483493583";
             model.from = @"新疆灾难监测站";
         }else  if( i == 1){
-            model.mainTitle = @"新疆阿克苏拜城县发生3.9级地震 震源深度10千米";
+            model.mainTitle = @"云南省昭通市发生5.4级地震 震源深度20千米";
             model.time = @"1483432383";
-            model.from = @"新疆地震分局";
+            model.from = @"云南地震网";
 
         }else {
-            model.urlStr = @"disater";
-            model.isPic = YES;
+//            model.urlStr = @"disater";
+//            model.isPic = YES;
             model.time = @"1483407183";
-            model.mainTitle = @"新疆阿克苏拜城县发生3.9级地震 震源深度10千米";
-            model.from = @"新疆地震分局";
+            model.mainTitle = @"台风“拉齐”将1月23日在广西省北海市登陆";
+            model.from = @"广西气象网";
 
         }
         [self.homeDataArray addObject:model];

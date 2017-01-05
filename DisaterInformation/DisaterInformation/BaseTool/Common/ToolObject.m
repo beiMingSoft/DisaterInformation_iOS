@@ -29,7 +29,7 @@
         [but setImage:image forState:UIControlStateHighlighted];
         but.frame = CGRectMake(0, 0, 32, 32);
     }
-    [but setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [but setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 0)];
     UIBarButtonItem *barbutton = [[UIBarButtonItem alloc] initWithCustomView:but];
     return barbutton;
 }

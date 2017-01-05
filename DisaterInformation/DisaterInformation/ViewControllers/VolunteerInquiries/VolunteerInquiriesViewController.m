@@ -88,7 +88,7 @@ static NSString *cellIde = @"volunteerCell";
 -(void)createHeadView
 {
     NSArray *arr = @[@"志愿组织",@"个人组织"];
-    LSSwitchTitleView *switchTitleView = [[LSSwitchTitleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titleArray:arr textColor:[UIColor redColor] selectedColor:[UIColor colorWithRGBString:COLOR_YELLOW_1A1A1A]lineViewColor: [UIColor colorWithRGBString:COLOR_PRICELABEL_7ebb15] bgColor:[UIColor whiteColor] lineViewColor:COLOR_LINEVIEW_F0F0F  selecte:^(NSInteger index) {
+    LSSwitchTitleView *switchTitleView = [[LSSwitchTitleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titleArray:arr textColor:[UIColor redColor] selectedColor:[UIColor colorWithRGBString:COLOR_YELLOW_1A1A1A]lineViewColor: [UIColor colorWithRed:0.22f green:0.65f blue:0.85f alpha:1.00f] bgColor:[UIColor whiteColor] lineViewColor:COLOR_LINEVIEW_F0F0F  selecte:^(NSInteger index) {
                 switch (index) {
             case 0:
                         isPerson = NO;
@@ -140,6 +140,7 @@ static NSString *cellIde = @"volunteerCell";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
   return   GMLAYOUTRATE(90);
+//    return 90;
 }
 
 

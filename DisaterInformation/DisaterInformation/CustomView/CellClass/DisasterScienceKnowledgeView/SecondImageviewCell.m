@@ -128,6 +128,7 @@
     self.urlImageView2.backgroundColor =kCOLORRANDOM ;
     self.titleNameLabel.text = model.text;
     self.titleNameLabel2.text = model.time;
+    self.urlImageView.image  = [UIImage imageNamed:model.picture];
 }
 
 

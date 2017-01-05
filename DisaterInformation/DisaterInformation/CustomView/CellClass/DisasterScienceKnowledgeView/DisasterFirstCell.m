@@ -118,7 +118,7 @@
 
 -(void)setDisaterModel:(DisasterModel *)model
 {
-        self.urlImageView .backgroundColor = kCOLORRANDOM;
+        self.urlImageView.image = [UIImage imageNamed:@"earthquake_disbase"];
         self.titleNameLabel.text = model.text;
         self.timeLabel.text = model.time;
         self.fromeLabel.text = model.from;

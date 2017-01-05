@@ -50,7 +50,7 @@ static NSString *secondIde = @"Scell";
     [super viewDidLoad];
     [self createData];
     self.title = @"灾害科普知识";
-    self.titleArray = [NSMutableArray arrayWithObjects:@"地震",@"台风",@"海啸",@"火灾",@"泥石流",@"沙尘暴",@"龙卷风",@"更多",nil];
+    self.titleArray = [NSMutableArray arrayWithObjects:@"地震",@"台风",@"泥石流",@"火灾",@"洪水",@"沙尘暴",@"龙卷风",@"更多",nil];
     
     self.imageArr = [NSMutableArray arrayWithObjects:@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel", nil];
     
@@ -62,9 +62,10 @@ static NSString *secondIde = @"Scell";
 {
     for (int  i = 0; i< 3; i++) {
         DisasterModel *model = [[DisasterModel alloc]init ];
-        model.text = @"自然灾害的定义";
+        model.text = @"地震带来的灾难";
         model.time = @"23分钟";
         model.from= @"凤凰网";
+        model.picture = @"earthquake_disbase";
         [self.dataArray  addObject:model];
     }
     

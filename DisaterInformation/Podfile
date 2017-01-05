@@ -6,6 +6,8 @@ target 'DisaterInformation' do
  
 pod 'Masonry', '~> 1.0.0'
 pod 'SDAutoLayout', '~> 2.1.1'
+pod 'IQKeyboardManager'
+
 
 end
 
