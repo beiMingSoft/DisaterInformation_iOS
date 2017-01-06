@@ -12,30 +12,31 @@
 float layoutRateByHeight(float orginLayout){
     
     //以5 为准
-    if (DEVICE_HEIGHT  == 568) {
-        return 1 * orginLayout;
+    if (DEVICE_HEIGHT > 667) {
+        return 1.35 * orginLayout;
     } else if (DEVICE_HEIGHT > 568) {
-        return 1 * orginLayout;
-    } else if (DEVICE_HEIGHT > 480) {
-        return 0.85 * orginLayout;
+        return 1.17 * orginLayout;
     }
-    return 0.85 * orginLayout;
+    else
+    {
+        return 1*orginLayout;
+    }
 }
 
 
 
 @implementation GMLayoutRate : NSObject
 
-+ (CGFloat)layoutRateByOCHeight:(CGFloat)orginLayout
-{
-    if (DEVICE_HEIGHT > 667) {
-        return 1 * orginLayout;
-    } else if (DEVICE_HEIGHT > 568) {
-        return 1 * orginLayout;
-    } else if (DEVICE_HEIGHT > 480) {
-        return 0.85 * orginLayout;
-    }
-    return 0.85 * orginLayout;
-}
+//+ (CGFloat)layoutRateByOCHeight:(CGFloat)orginLayout
+//{
+//    if (DEVICE_HEIGHT > 667) {
+//        return 1 * orginLayout;
+//    } else if (DEVICE_HEIGHT > 568) {
+//        return 1 * orginLayout;
+//    } else if (DEVICE_HEIGHT > 480) {
+//        return 0.85 * orginLayout;
+//    }
+//    return 0.85 * orginLayout;
+//}
 
 @end

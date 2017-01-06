@@ -30,7 +30,6 @@
  */
 @property(nonatomic ,copy)NSString *from;
 
-
 /**
  * id
  */

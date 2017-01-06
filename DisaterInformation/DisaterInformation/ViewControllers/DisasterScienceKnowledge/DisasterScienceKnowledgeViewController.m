@@ -106,21 +106,21 @@ static NSString *secondIde = @"Scell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return GMLAYOUTRATE(250);
+    return GMLAYOUTRATE(220);
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return GMLAYOUTRATE(180);
+    return GMLAYOUTRATE(190);
     
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(250)) ];
-    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(250)) city:nil cityName:nil imageArray:self.imageArr titleArray:self.titleArray spots:@"自然灾害" moreTitle:nil  ColCount:4];
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(220)) ];
+    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(220)) city:nil cityName:nil imageArray:self.imageArr titleArray:self.titleArray spots:@"自然灾害" moreTitle:nil  ColCount:4];
     chv.backgroundColor = [UIColor whiteColor];
     chv.delegate = self;
     [headView addSubview:chv];

@@ -55,7 +55,7 @@ static NSString *relief = @"reliefCell";
         
         ReliefMaterialModel * model = [[ReliefMaterialModel alloc]init ];
         model.MaterialsName = @"药物";
-        model.urlImage = @"comments";
+        model.urlImage = @"home_btn_travel";
         model.MaterialsNumbers = 9333;
         model.MaterialsAddress = @"4号存储点";
         model.CheckTime = @"2016-12-23";

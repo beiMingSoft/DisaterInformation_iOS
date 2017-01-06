@@ -23,7 +23,7 @@
 #import "ToolObject.h"
 #import "MeInfoViewController.h"
 #import "HomeDetailViewController.h"
-
+#import "DisasterKnowledgeViewController.h"
 @interface HomeViewController ()<UITableViewDelegate,UITableViewDataSource,sendActionAndIndexDelegate,UITextFieldDelegate>
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *homeDataArray;
@@ -132,16 +132,16 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(440)) ];
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(370)) ];
     //轮播图，广告页
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(180)) ];
+    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(150)) ];
     imageView.image = [UIImage imageNamed:@"disater"];
     [headView addSubview:imageView];
     
-    NSArray *titleArr = @[@"灾害预警",@"自救互助",@"灾害科普",@"灾害风险",@"恢复重建",@"避难场所",@"救灾物质查询",@"志愿者查询"];
+    NSArray *titleArr = @[@"灾害预警",@"自救互助",@"灾害科普",@"灾害风险",@"恢复重建",@"避难场所",@"救灾物质",@"志愿者查询"];
     NSArray *imageArr =@[@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel"];
     
-    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), DEVICE_WIDTH, GMLAYOUTRATE(255)) city:nil cityName:nil imageArray:imageArr titleArray:titleArr spots:@"自然灾害" moreTitle:@"查看更多" ColCount:4];
+    CustomHeaderView *chv = [[CustomHeaderView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(imageView.frame), DEVICE_WIDTH, GMLAYOUTRATE(220)) city:nil cityName:nil imageArray:imageArr titleArray:titleArr spots:@"自然灾害" moreTitle:@"查看更多" ColCount:4];
     chv.backgroundColor = [UIColor whiteColor];
     chv.delegate = self;
     [headView addSubview:chv];
@@ -149,16 +149,14 @@
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return GMLAYOUTRATE(440);
+    return GMLAYOUTRATE(370);
 }
 
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MMLog(@"%f",GMLAYOUTRATE(100))
-//    return  GMLAYOUTRATE(100);
+    return  GMLAYOUTRATE(100);
 
-    return 100;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -202,7 +200,9 @@
             
             break;
         case 2://灾害科普
-            vc = [[DisasterScienceKnowledgeViewController alloc]init ];
+//            vc = [[DisasterScienceKnowledgeViewController alloc]init ];
+            vc = [[DisasterKnowledgeViewController alloc]init ];
+
             
             break;
         case 3: //风险分布

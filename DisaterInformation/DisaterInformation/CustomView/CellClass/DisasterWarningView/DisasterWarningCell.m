@@ -26,20 +26,8 @@
 -(void)setModel:(DisasterWarningModel *)model
 {
     self.mainTitleLabel.text = model.mainTitle;
-    
-    MMLog(@"图片%@", model.urlStr)
-    model.cellHeight = 0;
-    if (model.urlStr.length) {
-        self.urlImageView.image = [UIImage imageNamed:model.urlStr];
-        model.cellHeight = 200;
-
-    }else{
-        self.urlImageView.image = nil;
-        model.cellHeight = 90;
-
-    }
+        model.cellHeight = 0;
     self.fromLabel.text = model.from;
-
     // 强制布局
     [self layoutIfNeeded];
 

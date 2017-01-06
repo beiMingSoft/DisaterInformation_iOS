@@ -10,6 +10,7 @@
 #import "CustomHeaderView.h"
 #import "DisasterWarningCell.h"
 #import "DisasterWarningModel.h"
+#import "DisasterWarningDetailViewController.h"
 @interface DisasterWarningViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic ,strong)UITableView *tableView;
@@ -57,20 +58,24 @@
        
         DisasterWarningModel * model = [[DisasterWarningModel alloc]init ];
         if (i == 0 ){
-            model.mainTitle = @"新疆阿克苏拜城县发生3.9级地震 震源深度10千米";
-            model.time = @"1483493583";
-            model.from = @"新疆灾难监测站";
+            model.mainTitle = @"白云鄂博矿区气象局发布道路结冰黄色预警[III级/较大]";
+            model.time = @"1483632000";
+            model.from = @"白云鄂博矿区气象局";
+            model.news_Id = i;
         }else  if( i == 1){
-            model.mainTitle = @"云南省昭通市发生5.4级地震 震源深度20千米";
-            model.time = @"1483432383";
-            model.from = @"云南地震网";
+            model.mainTitle = @"广西防城港市发布大风蓝色预警";
+            model.time = @"1482972540";
+            model.from = @"中国气象局网站";
+            model.news_Id = i;
 
         }else {
 //            model.urlStr = @"disater";
 //            model.isPic = YES;
-            model.time = @"1483407183";
-            model.mainTitle = @"台风“拉齐”将1月23日在广西省北海市登陆";
-            model.from = @"广西气象网";
+            model.time = @"1451868540";
+            model.mainTitle = @"2017年1月云南及周边地震活动概况";
+            model.from = @"地震监测中心";
+            model.news_Id = i;
+
 
         }
         [self.homeDataArray addObject:model];
@@ -104,8 +109,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    DisasterWarningModel *model = self.homeDataArray[indexPath.row];
-    return model.cellHeight;
+//    DisasterWarningModel *model = self.homeDataArray[indexPath.row];
+//    return model.cellHeight;
+    
+    return 80;
     
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -120,7 +127,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
+    DisasterWarningModel *model = self.homeDataArray[indexPath.row];
+    DisasterWarningDetailViewController *wdvc = [[DisasterWarningDetailViewController alloc]init ];
+    wdvc.news_ID = model.news_Id;
+    [self pushVC:wdvc];
 }
 
 @end

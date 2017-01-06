@@ -18,6 +18,6 @@ float layoutRateByHeight(float orginLayout);
 
 @interface GMLayoutRate :NSObject
 
-+ (CGFloat)layoutRateByOCHeight:(CGFloat)orginLayout;
+//+ (CGFloat)layoutRateByOCHeight:(CGFloat)orginLayout;
 
 @end

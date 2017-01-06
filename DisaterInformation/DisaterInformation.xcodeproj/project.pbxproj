@@ -31,6 +31,21 @@
 		712BCDAA1E0AD78B001F4A9A /* VolunteerInquiriesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 712BCDA81E0AD78B001F4A9A /* VolunteerInquiriesCell.xib */; };
 		712BCDAE1E0ADE55001F4A9A /* VolunteerInquiriesModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 712BCDAD1E0ADE55001F4A9A /* VolunteerInquiriesModel.m */; };
 		715972B71E0F710B00B2EF23 /* VolunteerInDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 715972B61E0F710B00B2EF23 /* VolunteerInDetailViewController.m */; };
+		7167A95C1E1F24670074F371 /* u17.png in Resources */ = {isa = PBXBuildFile; fileRef = 7167A95B1E1F24670074F371 /* u17.png */; };
+		7167A9651E1F2A370074F371 /* DisasterWarningDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167A9641E1F2A370074F371 /* DisasterWarningDetailViewController.m */; };
+		7167A9681E1F30CE0074F371 /* NSString+size.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167A9671E1F30CE0074F371 /* NSString+size.m */; };
+		7167A96B1E1F4D2C0074F371 /* 06暴雨洪涝的防范2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A9691E1F4D2C0074F371 /* 06暴雨洪涝的防范2.jpg */; };
+		7167A96C1E1F4D2C0074F371 /* 05暴雨洪涝的防范1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A96A1E1F4D2C0074F371 /* 05暴雨洪涝的防范1.jpg */; };
+		7167A96E1E1F4D820074F371 /* 04滑坡、泥石流、崩塌的防范.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A96D1E1F4D820074F371 /* 04滑坡、泥石流、崩塌的防范.jpg */; };
+		7167A9701E1F4D980074F371 /* 04滑坡、泥石流、崩塌的防范1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A96F1E1F4D980074F371 /* 04滑坡、泥石流、崩塌的防范1.jpg */; };
+		7167A9721E1F4E0E0074F371 /* 08台风、风暴潮的防范1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A9711E1F4E0E0074F371 /* 08台风、风暴潮的防范1.jpg */; };
+		7167A9741E1F4E2F0074F371 /* 09台风、风暴潮的防范.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A9731E1F4E2F0074F371 /* 09台风、风暴潮的防范.jpg */; };
+		7167A9761E1F4E4C0074F371 /* 15家庭火灾的防范1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A9751E1F4E4C0074F371 /* 15家庭火灾的防范1.jpg */; };
+		7167A9781E1F4E630074F371 /* 14家庭火灾逃生.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7167A9771E1F4E630074F371 /* 14家庭火灾逃生.jpg */; };
+		7167A9C41E1F94CB0074F371 /* DisasterKnowledgeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167A9C31E1F94CB0074F371 /* DisasterKnowledgeViewController.m */; };
+		7167A9C81E1F9A570074F371 /* DisasterKnowledgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167A9C61E1F9A570074F371 /* DisasterKnowledgeCell.m */; };
+		7167A9C91E1F9A570074F371 /* DisasterKnowledgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7167A9C71E1F9A570074F371 /* DisasterKnowledgeCell.xib */; };
+		7167A9CC1E1FA0690074F371 /* EarthquakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7167A9CB1E1FA0690074F371 /* EarthquakeViewController.m */; };
 		7179E2F01DFBD4EB0058DD27 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179E2EF1DFBD4EB0058DD27 /* main.m */; };
 		7179E2F31DFBD4EB0058DD27 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7179E2F21DFBD4EB0058DD27 /* AppDelegate.m */; };
 		7179E2F91DFBD4EB0058DD27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7179E2F71DFBD4EB0058DD27 /* Main.storyboard */; };
@@ -70,7 +85,6 @@
 		71CF305B1E1E377D00A6FE2F /* disstance.html in Resources */ = {isa = PBXBuildFile; fileRef = 71CF305A1E1E377D00A6FE2F /* disstance.html */; };
 		71CF305E1E1E37CD00A6FE2F /* u13.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF305D1E1E37CD00A6FE2F /* u13.png */; };
 		71CF30601E1E427700A6FE2F /* PlaceOfRefuge.html in Resources */ = {isa = PBXBuildFile; fileRef = 71CF305F1E1E427700A6FE2F /* PlaceOfRefuge.html */; };
-		71CF30621E1E428100A6FE2F /* u17.png in Resources */ = {isa = PBXBuildFile; fileRef = 71CF30611E1E428100A6FE2F /* u17.png */; };
 		AD647F1A0A48907814AD7DA8 /* libPods-DisaterInformation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 771CFD91096AC71C7B11073D /* libPods-DisaterInformation.a */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +152,26 @@
 		712BCDAD1E0ADE55001F4A9A /* VolunteerInquiriesModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerInquiriesModel.m; sourceTree = "<group>"; };
 		715972B51E0F710B00B2EF23 /* VolunteerInDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolunteerInDetailViewController.h; sourceTree = "<group>"; };
 		715972B61E0F710B00B2EF23 /* VolunteerInDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerInDetailViewController.m; sourceTree = "<group>"; };
+		7167A95B1E1F24670074F371 /* u17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u17.png; sourceTree = "<group>"; };
+		7167A9631E1F2A370074F371 /* DisasterWarningDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisasterWarningDetailViewController.h; sourceTree = "<group>"; };
+		7167A9641E1F2A370074F371 /* DisasterWarningDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisasterWarningDetailViewController.m; sourceTree = "<group>"; };
+		7167A9661E1F30CE0074F371 /* NSString+size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+size.h"; sourceTree = "<group>"; };
+		7167A9671E1F30CE0074F371 /* NSString+size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+size.m"; sourceTree = "<group>"; };
+		7167A9691E1F4D2C0074F371 /* 06暴雨洪涝的防范2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "06暴雨洪涝的防范2.jpg"; sourceTree = "<group>"; };
+		7167A96A1E1F4D2C0074F371 /* 05暴雨洪涝的防范1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "05暴雨洪涝的防范1.jpg"; sourceTree = "<group>"; };
+		7167A96D1E1F4D820074F371 /* 04滑坡、泥石流、崩塌的防范.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04滑坡、泥石流、崩塌的防范.jpg"; sourceTree = "<group>"; };
+		7167A96F1E1F4D980074F371 /* 04滑坡、泥石流、崩塌的防范1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "04滑坡、泥石流、崩塌的防范1.jpg"; sourceTree = "<group>"; };
+		7167A9711E1F4E0E0074F371 /* 08台风、风暴潮的防范1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "08台风、风暴潮的防范1.jpg"; sourceTree = "<group>"; };
+		7167A9731E1F4E2F0074F371 /* 09台风、风暴潮的防范.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "09台风、风暴潮的防范.jpg"; sourceTree = "<group>"; };
+		7167A9751E1F4E4C0074F371 /* 15家庭火灾的防范1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "15家庭火灾的防范1.jpg"; sourceTree = "<group>"; };
+		7167A9771E1F4E630074F371 /* 14家庭火灾逃生.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "14家庭火灾逃生.jpg"; sourceTree = "<group>"; };
+		7167A9C21E1F94CB0074F371 /* DisasterKnowledgeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisasterKnowledgeViewController.h; sourceTree = "<group>"; };
+		7167A9C31E1F94CB0074F371 /* DisasterKnowledgeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisasterKnowledgeViewController.m; sourceTree = "<group>"; };
+		7167A9C51E1F9A570074F371 /* DisasterKnowledgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisasterKnowledgeCell.h; sourceTree = "<group>"; };
+		7167A9C61E1F9A570074F371 /* DisasterKnowledgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisasterKnowledgeCell.m; sourceTree = "<group>"; };
+		7167A9C71E1F9A570074F371 /* DisasterKnowledgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisasterKnowledgeCell.xib; sourceTree = "<group>"; };
+		7167A9CA1E1FA0690074F371 /* EarthquakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EarthquakeViewController.h; sourceTree = "<group>"; };
+		7167A9CB1E1FA0690074F371 /* EarthquakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EarthquakeViewController.m; sourceTree = "<group>"; };
 		7179E2EB1DFBD4EB0058DD27 /* DisaterInformation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisaterInformation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7179E2EF1DFBD4EB0058DD27 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7179E2F11DFBD4EB0058DD27 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -211,7 +245,6 @@
 		71CF305A1E1E377D00A6FE2F /* disstance.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = disstance.html; sourceTree = "<group>"; };
 		71CF305D1E1E37CD00A6FE2F /* u13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u13.png; sourceTree = "<group>"; };
 		71CF305F1E1E427700A6FE2F /* PlaceOfRefuge.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = PlaceOfRefuge.html; sourceTree = "<group>"; };
-		71CF30611E1E428100A6FE2F /* u17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = u17.png; sourceTree = "<group>"; };
 		73A36C2EA6FEA6DC3549E1A8 /* Pods-DisaterInformation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisaterInformation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DisaterInformation/Pods-DisaterInformation.debug.xcconfig"; sourceTree = "<group>"; };
 		771CFD91096AC71C7B11073D /* libPods-DisaterInformation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DisaterInformation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4BD1BD986116BD5D5CB60E6 /* Pods-DisaterInformation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DisaterInformation.release.xcconfig"; path = "Pods/Target Support Files/Pods-DisaterInformation/Pods-DisaterInformation.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +290,13 @@
 			children = (
 				711523D91E016FE9000E2A42 /* DisasterScienceKnowledgeViewController.h */,
 				711523DA1E016FE9000E2A42 /* DisasterScienceKnowledgeViewController.m */,
+				7167A9C21E1F94CB0074F371 /* DisasterKnowledgeViewController.h */,
+				7167A9C31E1F94CB0074F371 /* DisasterKnowledgeViewController.m */,
+				7167A9C51E1F9A570074F371 /* DisasterKnowledgeCell.h */,
+				7167A9C61E1F9A570074F371 /* DisasterKnowledgeCell.m */,
+				7167A9C71E1F9A570074F371 /* DisasterKnowledgeCell.xib */,
+				7167A9CA1E1FA0690074F371 /* EarthquakeViewController.h */,
+				7167A9CB1E1FA0690074F371 /* EarthquakeViewController.m */,
 			);
 			path = DisasterScienceKnowledge;
 			sourceTree = "<group>";
@@ -454,6 +494,8 @@
 				71B178741DFCE81D00FD77B6 /* UIColor+Extension.m */,
 				718088E91E1B5B930009C503 /* ToolObject.h */,
 				718088EA1E1B5B930009C503 /* ToolObject.m */,
+				7167A9661E1F30CE0074F371 /* NSString+size.h */,
+				7167A9671E1F30CE0074F371 /* NSString+size.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -621,6 +663,8 @@
 			children = (
 				71B178911DFCFA6E00FD77B6 /* DisasterWarningViewController.h */,
 				71B178921DFCFA6E00FD77B6 /* DisasterWarningViewController.m */,
+				7167A9631E1F2A370074F371 /* DisasterWarningDetailViewController.h */,
+				7167A9641E1F2A370074F371 /* DisasterWarningDetailViewController.m */,
 			);
 			path = DisasterWarning;
 			sourceTree = "<group>";
@@ -647,8 +691,16 @@
 		71CF305C1E1E37CD00A6FE2F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7167A9771E1F4E630074F371 /* 14家庭火灾逃生.jpg */,
+				7167A9751E1F4E4C0074F371 /* 15家庭火灾的防范1.jpg */,
+				7167A96F1E1F4D980074F371 /* 04滑坡、泥石流、崩塌的防范1.jpg */,
+				7167A9731E1F4E2F0074F371 /* 09台风、风暴潮的防范.jpg */,
+				7167A9711E1F4E0E0074F371 /* 08台风、风暴潮的防范1.jpg */,
+				7167A96D1E1F4D820074F371 /* 04滑坡、泥石流、崩塌的防范.jpg */,
+				7167A9691E1F4D2C0074F371 /* 06暴雨洪涝的防范2.jpg */,
+				7167A96A1E1F4D2C0074F371 /* 05暴雨洪涝的防范1.jpg */,
 				71CF305D1E1E37CD00A6FE2F /* u13.png */,
-				71CF30611E1E428100A6FE2F /* u17.png */,
+				7167A95B1E1F24670074F371 /* u17.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -784,18 +836,27 @@
 			files = (
 				711D93311E02B852008D6C41 /* DisasterReliefMaterialInquiryCell.xib in Resources */,
 				718088F71E1BA4780009C503 /* InfoCell.xib in Resources */,
+				7167A9761E1F4E4C0074F371 /* 15家庭火灾的防范1.jpg in Resources */,
 				7179E2FE1DFBD4EB0058DD27 /* LaunchScreen.storyboard in Resources */,
-				71CF30621E1E428100A6FE2F /* u17.png in Resources */,
+				7167A95C1E1F24670074F371 /* u17.png in Resources */,
 				71CF305E1E1E37CD00A6FE2F /* u13.png in Resources */,
+				7167A96E1E1F4D820074F371 /* 04滑坡、泥石流、崩塌的防范.jpg in Resources */,
+				7167A9C91E1F9A570074F371 /* DisasterKnowledgeCell.xib in Resources */,
 				71B178861DFCF89000FD77B6 /* MoreTableViewCell.xib in Resources */,
 				71CF30601E1E427700A6FE2F /* PlaceOfRefuge.html in Resources */,
+				7167A96B1E1F4D2C0074F371 /* 06暴雨洪涝的防范2.jpg in Resources */,
 				7179E2FB1DFBD4EB0058DD27 /* Assets.xcassets in Resources */,
 				71B1787A1DFCEE4900FD77B6 /* HomeCell.xib in Resources */,
+				7167A9741E1F4E2F0074F371 /* 09台风、风暴潮的防范.jpg in Resources */,
 				712BCDAA1E0AD78B001F4A9A /* VolunteerInquiriesCell.xib in Resources */,
+				7167A9781E1F4E630074F371 /* 14家庭火灾逃生.jpg in Resources */,
+				7167A9721E1F4E0E0074F371 /* 08台风、风暴潮的防范1.jpg in Resources */,
+				7167A9701E1F4D980074F371 /* 04滑坡、泥石流、崩塌的防范1.jpg in Resources */,
 				712BCDA01E0AA8C4001F4A9A /* TestCell.xib in Resources */,
 				7179E2F91DFBD4EB0058DD27 /* Main.storyboard in Resources */,
 				71CF305B1E1E377D00A6FE2F /* disstance.html in Resources */,
 				71B1789F1DFD043400FD77B6 /* DisasterWarningCell.xib in Resources */,
+				7167A96C1E1F4D2C0074F371 /* 05暴雨洪涝的防范1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,6 +947,7 @@
 				718088F61E1BA4780009C503 /* InfoCell.m in Sources */,
 				712BCD881E0AA43F001F4A9A /* ZJCustomLabel.m in Sources */,
 				7179E2F01DFBD4EB0058DD27 /* main.m in Sources */,
+				7167A9C41E1F94CB0074F371 /* DisasterKnowledgeViewController.m in Sources */,
 				71B178751DFCE81D00FD77B6 /* UIColor+Extension.m in Sources */,
 				718088F21E1BA37B0009C503 /* InformationViewController.m in Sources */,
 				712BCD851E0AA43F001F4A9A /* UIView+ZJFrame.m in Sources */,
@@ -905,15 +967,19 @@
 				71B178641DFCDD0700FD77B6 /* GMLayoutRate.m in Sources */,
 				711D93301E02B852008D6C41 /* DisasterReliefMaterialInquiryCell.m in Sources */,
 				71B1786B1DFCE34800FD77B6 /* HomeViewController.m in Sources */,
+				7167A9651E1F2A370074F371 /* DisasterWarningDetailViewController.m in Sources */,
 				71B178811DFCF85E00FD77B6 /* MoreInformationViewController.m in Sources */,
 				71B178931DFCFA6E00FD77B6 /* DisasterWarningViewController.m in Sources */,
+				7167A9681E1F30CE0074F371 /* NSString+size.m in Sources */,
 				7182BFB01E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m in Sources */,
 				71B178791DFCEE4900FD77B6 /* HomeCell.m in Sources */,
 				71B178681DFCE30900FD77B6 /* BaseTableViewController.m in Sources */,
+				7167A9C81E1F9A570074F371 /* DisasterKnowledgeCell.m in Sources */,
 				71B1787E1DFCF1B900FD77B6 /* HomeModel.m in Sources */,
 				715972B71E0F710B00B2EF23 /* VolunteerInDetailViewController.m in Sources */,
 				7182BFB41E0175D100BBF0D3 /* VolunteerInquiriesViewController.m in Sources */,
 				718088E51E1B56120009C503 /* CustomNaviViewController.m in Sources */,
+				7167A9CC1E1FA0690074F371 /* EarthquakeViewController.m in Sources */,
 				711523EA1E017264000E2A42 /* RiskDistributionViewController.m in Sources */,
 				711523DB1E016FE9000E2A42 /* DisasterScienceKnowledgeViewController.m in Sources */,
 			);

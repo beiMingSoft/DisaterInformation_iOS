@@ -13,4 +13,9 @@
 
 - (NSString *)updateTimeForRow:(NSString *)str;
 
+-(void)pushVC:(UIViewController *)vc;
+
+-(void)popVC;
+
+
 @end

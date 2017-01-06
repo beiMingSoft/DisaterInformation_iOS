@@ -12,10 +12,10 @@
 #import "DisasterWarningModel.h"
 #import "HomeDetailViewController.h"
 @interface SelfHelpmutualGuideViewController ()<UITableViewDelegate,UITableViewDataSource>
-
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *homeDataArray;
-@property(nonatomic ,strong)NSMutableArray *secontionTitles;
+@property(nonatomic ,strong)NSArray *secontionTitles;
+
 
 @end
 
@@ -55,72 +55,19 @@
 //z制造假数据
 -(void)createData{
     
-    self.secontionTitles = [[NSMutableArray alloc]init ];
+    self.secontionTitles = [[NSArray alloc]init ];
 
-    for (int i =0 ; i< 5; i++) {
-        DisasterWarningModel * model = [[DisasterWarningModel alloc]init ];
-    
-        if (i == 0) {
-//            model.urlStr = @"disater";
-//            model.isPic = YES;
-            [self.secontionTitles addObject:@"地震"];
-            model.mainTitle = @"地震逃生技巧";
-            model.time = @"10分钟";
-            model.from = @"国家减灾救灾网";
-            model.news_Id = i + 1000;
-            NSMutableArray *arr = [[NSMutableArray alloc]init ];
-            [arr addObject:model];
-            [self.homeDataArray addObject:arr];
-
-        }else if( i == 1){
-            [self.secontionTitles addObject:@"洪水"];
-            model.mainTitle = @"洪水逃生技巧";
-            model.time = @"10分钟";
-            model.from = @"国家减灾救灾网";
-            model.news_Id = i + 1000;
-
-            NSMutableArray *arr = [[NSMutableArray alloc]init ];
-            [arr addObject:model];
-            [self.homeDataArray addObject:arr];
-
-        }else if( i == 2){
-            [self.secontionTitles addObject:@"滑坡"];
-            model.mainTitle = @"滑坡逃生技巧";
-            model.time = @"10分钟";
-            model.from = @"国家减灾救灾网";
-            model.news_Id = i + 1000;
-
-            NSMutableArray *arr = [[NSMutableArray alloc]init ];
-            [arr addObject:model];
-            [self.homeDataArray addObject:arr];
-
-            
-        }else if( i == 3){
-            
-            [self.secontionTitles addObject:@"台风"];
-            model.mainTitle = @"台风逃生技巧";
-            model.time = @"10分钟";
-            model.from = @"国家减灾救灾网";
-            model.news_Id = i + 1000;
-            NSMutableArray *arr = [[NSMutableArray alloc]init ];
-            [arr addObject:model];
-            [self.homeDataArray addObject:arr];
-
-        }else if( i == 4){
-            [self.secontionTitles addObject:@"火灾"];
-            model.mainTitle = @"家庭火灾逃生技巧";
-            model.time = @"10分钟";
-            model.from = @"国家减灾救灾网";
-            model.news_Id = i + 1000;
-            NSMutableArray *arr = [[NSMutableArray alloc]init ];
-            [arr addObject:model];
-            [self.homeDataArray addObject:arr];
-
-        }
-    
-    }
-    
-    
+    self.secontionTitles = @[@"地震",@"洪水",@"滑坡",@"台风",@"火灾"];
+    NSArray *array1 = @[@"地震逃生技巧",@"地震自救互救"];
+    NSArray *array2 = @[@"暴雨洪涝的防范1",@"暴雨洪涝的防范2",@"冰凌洪水、山洪的防范"];
+    NSArray *array3 = @[@"滑坡、泥石流、崩塌的防范1",@"滑坡、泥石流、崩塌的防范2"];
+    NSArray *array4 = @[@"台风、风暴潮的防范1",@"台风、风暴潮的防范2"];
+    NSArray *array5 = @[@"家庭火灾逃生1",@"家庭火灾的逃生2"];
+    [self.homeDataArray addObject:array1];
+    [self.homeDataArray addObject:array2];
+    [self.homeDataArray addObject:array3];
+    [self.homeDataArray addObject:array4];
+    [self.homeDataArray addObject:array5];
 }
 
 
@@ -138,22 +85,22 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DisasterWarningCell *cell = [tableView dequeueReusableCellWithIdentifier:@"warningCell"];
-    DisasterWarningModel *model = self.homeDataArray[indexPath.section][indexPath.row];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"DisasterWarningCell" owner:self options:nil]lastObject];
     }
-    cell.timeLabel.text =  model.time ;
 
-    [cell setModel:model];
+    cell.mainTitleLabel.text = self.homeDataArray[indexPath.section][indexPath.row];
+    cell.timeLabel.text = @"10分钟前";
+    cell.fromLabel.text = @"国家减灾救灾网";
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    DisasterWarningModel *model = self.homeDataArray[indexPath.section][indexPath.row];
-    return model.cellHeight;
-    
+
+
+    return 80;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     
@@ -169,10 +116,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DisasterWarningModel *model = self.homeDataArray[indexPath.section][indexPath.row];
     HomeDetailViewController *hvc = [[HomeDetailViewController alloc]init ];
-    hvc.news_Id = model.news_Id;
-    hvc.title = model.mainTitle;
+    hvc.news_Id =  indexPath.section * 10 +indexPath.row;;
+    hvc.title = self.homeDataArray[indexPath.section][indexPath.row];
     [self.navigationController pushViewController:hvc animated:YES];
 }
 

@@ -66,7 +66,14 @@
 }
 
 
+-(void)pushVC:(UIViewController *)vc
+{
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
-
+-(void)popVC
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

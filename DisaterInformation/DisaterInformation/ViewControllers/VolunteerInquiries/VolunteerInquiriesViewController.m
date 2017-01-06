@@ -139,8 +139,8 @@ static NSString *cellIde = @"volunteerCell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  return   GMLAYOUTRATE(90);
-//    return 90;
+//  return   GMLAYOUTRATE(90);
+    return 90;
 }
 
 

@@ -37,15 +37,15 @@
     if (self) {
         // 九宫格
         NSInteger totalloc=col;
-        CGFloat appvieww = GMLAYOUTRATE(78.5);
-        CGFloat appviewh = GMLAYOUTRATE(78.5);
+        CGFloat appvieww = 70;
+        CGFloat appviewh = 70;
         CGFloat margin = (DEVICE_WIDTH-totalloc*appvieww)/(totalloc+1);
         for (int  i = 0 ; i < titleArr.count; i++) {
                 int row = i/totalloc;//行号
                 //1/3=0,2/3=0,3/3=1;
                 int loc=i%totalloc;//列号
                 CGFloat appviewx = margin+(margin+appvieww)*loc;
-                CGFloat appviewy = margin+(margin+appviewh+8)*row;
+                CGFloat appviewy = margin+(margin+appviewh + 10)*row;
             
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(appviewx, appviewy, appvieww, appviewh) ;
@@ -67,7 +67,7 @@
         
         }
         
-        UIView  *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.button.frame)+20, DEVICE_WIDTH, 5) ];
+        UIView  *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.button.frame)+margin, DEVICE_WIDTH, 5) ];
         lineView.backgroundColor = [UIColor colorWithRGBString:COLOR_LINEVIEW_F0F0F];
         [self addSubview:lineView];
         
@@ -79,7 +79,7 @@
         headLabel.textColor = [UIColor colorWithRGBString:COLOR_SPOTTITLE_111111];
         [self addSubview:headLabel];
         [headLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(lineView.mas_bottom).offset(10);
+            make.top.equalTo(self.mas_bottom).offset(GMLAYOUTRATE(-30));
             make.left.equalTo(@12);
             make.right.equalTo(@-10);
             make.height.equalTo(@20);
@@ -102,18 +102,15 @@
             make.size.mas_equalTo(CGSizeMake(GMLAYOUTRATE(100), 20));
         }];
         UIView *sqliteView = [[UIView alloc]init ];
-        sqliteView.backgroundColor = [UIColor colorWithRGBString:COLOR_LINEVIEW_F0F0F];
-//        sqliteView.backgroundColor = [UIColor purpleColor];
-        
-//        [self addSubview:sqliteView];
-//        [sqliteView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.equalTo(moreBtn.mas_bottom).offset(GMLAYOUTRATE(6));
-//            make.left.equalTo(@0);
-//            make.width.offset(DEVICE_WIDTH);
-//            make.height.offset(1);
-//            
-//        }];
-//        
+        sqliteView.backgroundColor = [UIColor colorWithRGBString:COLOR_LINEVIEW_F0F0F];        
+        [self addSubview:sqliteView];
+        [sqliteView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.mas_bottom);
+            make.left.equalTo(@0);
+            make.width.offset(DEVICE_WIDTH);
+            make.height.offset(1);
+        }];
+
         NSLog(@"%f",CGRectGetMaxY(sqliteView.frame));
         
     }

@@ -11,8 +11,6 @@
 @interface DisasterWarningCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *mainTitleLabel;
 
-@property (weak, nonatomic) IBOutlet UIImageView *urlImageView;
-
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *fromLabel;

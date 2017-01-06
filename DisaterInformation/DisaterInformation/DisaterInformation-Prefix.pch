@@ -12,9 +12,10 @@
 
 #import "Define.h"
 #import "GMLayoutRate.h"
-#import "Masonry.H"
+#import "Masonry.h"
 #import "UIColor+Extension.h"
 #import "SDAutoLayout.h"
+#import "NSString+size.h"
 
 
 
