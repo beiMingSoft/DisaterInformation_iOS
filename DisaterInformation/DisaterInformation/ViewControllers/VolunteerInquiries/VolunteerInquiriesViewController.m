@@ -100,9 +100,7 @@ static NSString *cellIde = @"volunteerCell";
                 break;
             case 1:
                         isPerson = YES;
-                        self.navigationItem.rightBarButtonItem = [ToolObject backBarButtonWithImageName:@"screen_icon" select:@selector(searchAction) target:self];
-                        
-                        
+                        [self createRightButton];
                 break;
             default:
                 break;
@@ -111,6 +109,16 @@ static NSString *cellIde = @"volunteerCell";
     }];
     self.tableView.tableHeaderView = switchTitleView;
 }
+
+
+-(void)createRightButton
+{
+    self.navigationItem.rightBarButtonItem = [ToolObject backBarButtonWithImageName:@"screen_icon" select:@selector(searchAction) target:self];
+
+}
+
+
+
 #pragma mark --UITableViewDelegate，UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
