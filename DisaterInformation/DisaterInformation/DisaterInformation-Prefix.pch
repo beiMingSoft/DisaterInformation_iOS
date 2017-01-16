@@ -16,7 +16,7 @@
 #import "UIColor+Extension.h"
 #import "SDAutoLayout.h"
 #import "NSString+size.h"
-
+#import "ToolObject.h"
 
 
 #endif /* DisaterInformation_Prefix_pch */

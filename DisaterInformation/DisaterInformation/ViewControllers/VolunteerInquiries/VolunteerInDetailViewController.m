@@ -49,13 +49,14 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view addSubview:self.tableView];
     [self createData];
+    self.title = @"Personal Information";
     self.tableView.tableFooterView = [[UIView alloc]init ];
 }
 
 -(void)createData
 {
-    self.nameArr = @[@"姓名",@"性别",@"籍贯",@"住址",@"电话",@"个人技能"];
-    NSArray *arr = @[@"王二",@"男",@"中国",@"北京市海淀区中关村软件园",@"18210014321",@"医生，户外攀险"];
+    self.nameArr = @[@"Name:",@"Sex:",@"Native Place:",@"Address:",@"Tel:",@"Skill:"];
+    NSArray *arr = @[@"WangEr",@"Men",@"China",@"Zhongguancun Haidian District Software Park, Beijing",@"18210014321",@"Doctor, outdoor climbing"];
     [self.dataArr  addObjectsFromArray:arr];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -70,7 +71,13 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"cellIde" ];
     }
     cell.textLabel.text = self.nameArr[indexPath.row];
+    cell.textLabel.font = font14;
+    cell.textLabel.textColor = [UIColor colorWithRGBString:COLOR_BLACK_333333];
+    
     cell.detailTextLabel.text = self.dataArr[indexPath.row];
+    cell.detailTextLabel.textColor = [UIColor colorWithRGBString:COLOR_LIGHTGRAY_666666 ];
+    cell.detailTextLabel.numberOfLines = 0;
+    cell.detailTextLabel.font = font12;
     return cell;
 }
 

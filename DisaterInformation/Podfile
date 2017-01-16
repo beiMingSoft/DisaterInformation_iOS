@@ -1,4 +1,5 @@
 
+
 #tform :ios, '8.0'
 inhibit_all_warnings!
 
@@ -7,6 +8,25 @@ target 'DisaterInformation' do
 pod 'Masonry', '~> 1.0.0'
 pod 'SDAutoLayout', '~> 2.1.1'
 pod 'IQKeyboardManager'
+pod 'SMPageControl'
+pod ‘KRVideoPlayer’
+pod 'AMap3DMap'
+
+# 主模块(必须)
+pod 'ShareSDK3'
+# Mob 公共库(必须) 如果同时集成SMSSDK iOS2.0:可看此注意事项：http://bbs.mob.com/thread-20051-1-1.html
+pod 'MOBFoundation'
+pod 'ShareSDK3/ShareSDKPlatforms/Facebook'
+pod 'ShareSDK3/ShareSDKPlatforms/SinaWeibo'
+pod 'ShareSDK3/ShareSDKPlatforms/WeChat'
+pod 'ShareSDK3/ShareSDKUI'
+# 扩展模块（在调用可以弹出我们UI分享方法的时候是必需的）
+pod 'ShareSDK3/ShareSDKExtension'
+
+pod "QBImagePickerController"
+
+
+
 
 
 end

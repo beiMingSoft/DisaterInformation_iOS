@@ -10,7 +10,9 @@
 #import "ZJSegmentStyle.h"
 #import "ZJScrollPageView.h"
 #import "RestorationListViewController.h"
-@interface RestorationAndReconstructionVC ()<ZJScrollPageViewDelegate>
+#import "RestoraEditViewController.h"
+
+@interface RestorationAndReconstructionVC ()<ZJScrollPageViewDelegate,ZJScrollPageViewChildVcDelegate>
 
 @property(strong, nonatomic)NSArray<NSString *> *titles;
 @property(strong, nonatomic)NSArray<UIViewController *> *childVcs;
@@ -23,7 +25,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title =  @"恢复重建指南";
     self.view.backgroundColor = [UIColor whiteColor];
     
     //必要的设置, 如果没有设置可能导致内容显示不正常
@@ -36,20 +37,18 @@
     style.gradualChangeTitleColor = YES;
     
     
-    self.titles = @[@"国家政策",
-                    @"区域政策",
-                    @"重建技术",
-                    @"法律法规",
-                    @"重建标准",
-                    @"技术指导",
-                    @"环境恢复",
-                    @"生态恢复",
-                    ];
     
+//    self.titles = @[@"Reconstruction policy",@"Reconstruction Planning",@"Rebuild Guidelines",@"Rebuild Progress",@"Rebuild Standard"];
+    self.titles = @[@"Policy",@"Planning",@"Guidelines",@"Progress",@"Standard"];
+
     // 初始化
     ZJScrollPageView *scrollPageView = [[ZJScrollPageView alloc] initWithFrame:CGRectMake(0, 64.0, self.view.bounds.size.width, self.view.bounds.size.height - 64.0) segmentStyle:style titles:self.titles parentViewController:self delegate:self];
     
     [self.view addSubview:scrollPageView];
+    
+    self.navigationItem.rightBarButtonItem = [ToolObject backBarButtonWithImageName:@"edit_icon" select:@selector(editAction) target:self];
+    
+    
 }
 
 
@@ -75,6 +74,14 @@
     return childVc;
 }
 
+
+
+-(void)editAction
+{
+    RestoraEditViewController * revc = [[RestoraEditViewController alloc]init];
+    [self pushVC:revc];
+    
+}
 
 
 @end

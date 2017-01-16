@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
     self.navigationItem.leftBarButtonItem = [ToolObject backBarButtonWithImageName:@"nav_back" select:@selector(back) target:self];
+    
+    
 }
 -(void)back
 {
@@ -37,32 +39,32 @@
     //秒转分钟
     NSInteger small = time / 60;
     if (small == 0) {
-        return [NSString stringWithFormat:@"刚刚"];
+        return [NSString stringWithFormat:@"just"];
     }
     
     
     if (small < 60) {
-        return [NSString stringWithFormat:@"%ld分钟前",small];
+        return [NSString stringWithFormat:@"%ld minutes ago",small];
     }
     
     // 秒转小时
     NSInteger hours = time/3600;
     if (hours<24) {
-        return [NSString stringWithFormat:@"%ld小时前",hours];
+        return [NSString stringWithFormat:@"%ld hours ago",hours];
     }
     //秒转天数
     NSInteger days = time/3600/24;
     if (days < 30) {
-        return [NSString stringWithFormat:@"%ld天前",days];
+        return [NSString stringWithFormat:@"%ld days ago",days];
     }
     //秒转月
     NSInteger months = time/3600/24/30;
     if (months < 12) {
-        return [NSString stringWithFormat:@"%ld月前",months];
+        return [NSString stringWithFormat:@"%ld months",months];
     }
     //秒转年
     NSInteger years = time/3600/24/30/12;
-    return [NSString stringWithFormat:@"%ld年前",years];
+    return [NSString stringWithFormat:@"%ld years",years];
 }
 
 
@@ -74,6 +76,7 @@
 -(void)popVC
 {
     [self.navigationController popViewControllerAnimated:YES];
+
 }
 
 @end

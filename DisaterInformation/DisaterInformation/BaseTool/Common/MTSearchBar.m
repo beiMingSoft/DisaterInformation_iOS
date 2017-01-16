@@ -22,14 +22,14 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        self.size = CGSizeMake(GMLAYOUTRATE(DEVICE_WIDTH - 80), 30);
+//        self.size = CGSizeMake(GMLAYOUTRATE(DEVICE_WIDTH - 80), 30);
         self.font =  font14;
         self.placeholder = @"请输入搜索关键字";
         self.borderStyle = UITextBorderStyleRoundedRect;
         UIImageView *iconImageView = [[UIImageView alloc]init ];
         iconImageView.image = [UIImage imageNamed:@"search"];
         iconImageView.contentMode = UIViewContentModeCenter;
-        iconImageView.size = CGSizeMake(30, 30);
+//        iconImageView.size = CGSizeMake(30, 30);
         self.leftView = iconImageView;
         self.leftViewMode = UITextFieldViewModeAlways;
         self.layer.cornerRadius = 15;

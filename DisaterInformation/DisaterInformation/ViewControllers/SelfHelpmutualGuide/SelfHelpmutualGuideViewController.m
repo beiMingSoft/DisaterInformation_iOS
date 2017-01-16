@@ -46,7 +46,6 @@
     [super viewDidLoad];
     
     [self createData];
-    self.title = @"自救互助指南";
     [self.view addSubview:self.tableView];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100.0f;
@@ -57,17 +56,19 @@
     
     self.secontionTitles = [[NSArray alloc]init ];
 
-    self.secontionTitles = @[@"地震",@"洪水",@"滑坡",@"台风",@"火灾"];
-    NSArray *array1 = @[@"地震逃生技巧",@"地震自救互救"];
-    NSArray *array2 = @[@"暴雨洪涝的防范1",@"暴雨洪涝的防范2",@"冰凌洪水、山洪的防范"];
-    NSArray *array3 = @[@"滑坡、泥石流、崩塌的防范1",@"滑坡、泥石流、崩塌的防范2"];
-    NSArray *array4 = @[@"台风、风暴潮的防范1",@"台风、风暴潮的防范2"];
-    NSArray *array5 = @[@"家庭火灾逃生1",@"家庭火灾的逃生2"];
+    self.secontionTitles = @[@"EARTHQUAKE",@"FLOOD",@"LANDSLIDE",@"TYPHOON",@"FIRE",@"OTHERS"];
+    NSArray *array1 = @[@"Earthquake escape techniques",@"Earthquake rescue themselves"];
+    NSArray *array2 = @[@"Precaution against floods"];
+    NSArray *array3 = @[@"Landslides, debris flow, collapse prevention"];
+    NSArray *array4 = @[@"Prevention of typhoons and storm surges"];
+    NSArray *array5 = @[@"Family Fire Escape",];
+    NSArray *array6 = @[@"Rescue heart patients",@"Artificial respiration"];
     [self.homeDataArray addObject:array1];
     [self.homeDataArray addObject:array2];
     [self.homeDataArray addObject:array3];
     [self.homeDataArray addObject:array4];
     [self.homeDataArray addObject:array5];
+    [self.homeDataArray addObject:array6];
 }
 
 
@@ -90,8 +91,8 @@
     }
 
     cell.mainTitleLabel.text = self.homeDataArray[indexPath.section][indexPath.row];
-    cell.timeLabel.text = @"10分钟前";
-    cell.fromLabel.text = @"国家减灾救灾网";
+    cell.timeLabel.text = @"10 minutes";
+    cell.fromLabel.text = @"National Disaster Relief Network";
     return cell;
 }
 

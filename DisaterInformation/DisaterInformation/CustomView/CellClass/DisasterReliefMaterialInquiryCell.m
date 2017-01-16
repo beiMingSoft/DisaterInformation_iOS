@@ -27,7 +27,7 @@
     self.MaterialsNameLabel.text = model.MaterialsName;
     self.MaterialsAddressLabel.text = model.MaterialsAddress;
     self.checkTimeLabel.text = model.CheckTime;
-    self.numberLabel.text = [NSString stringWithFormat:@"共%ld单位/箱",model.MaterialsNumbers];
+    self.numberLabel.text = [NSString stringWithFormat:@"Total %ld box",model.MaterialsNumbers];
     self.MaterialsImageView.image = [UIImage imageNamed:model.urlImage];
 
 }

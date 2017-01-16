@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="RRZShowImageCCellID" id="NIc-91-bzA" customClass="RRZShowEditImageCell">
+            <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="102" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Tw-qL-HO8"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-c8-9q6">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="15" id="0ue-FV-gJ0"/>
+                            <constraint firstAttribute="height" constant="15" id="2dX-hc-MSb"/>
+                        </constraints>
+                        <state key="normal" image="delect_icon"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="2Tw-qL-HO8" secondAttribute="trailing" id="4JG-hu-Hu9"/>
+                <constraint firstAttribute="trailing" secondItem="uy1-c8-9q6" secondAttribute="trailing" constant="4" id="Phr-zZ-Ms6"/>
+                <constraint firstItem="uy1-c8-9q6" firstAttribute="top" secondItem="NIc-91-bzA" secondAttribute="top" constant="2" id="aX5-53-Jqq"/>
+                <constraint firstAttribute="bottom" secondItem="2Tw-qL-HO8" secondAttribute="bottom" id="ddU-Ie-k0K"/>
+                <constraint firstItem="2Tw-qL-HO8" firstAttribute="top" secondItem="NIc-91-bzA" secondAttribute="top" id="geA-bB-FEk"/>
+                <constraint firstItem="2Tw-qL-HO8" firstAttribute="leading" secondItem="NIc-91-bzA" secondAttribute="leading" id="ihn-0d-3eg"/>
+            </constraints>
+            <size key="customSize" width="102" height="100"/>
+            <connections>
+                <outlet property="deleteBtn" destination="uy1-c8-9q6" id="oNp-fA-aL7"/>
+                <outlet property="img" destination="2Tw-qL-HO8" id="mDp-qK-gWw"/>
+            </connections>
+            <point key="canvasLocation" x="-102" y="-73"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="delect_icon" width="20" height="20"/>
+    </resources>
+</document>

@@ -124,14 +124,6 @@
     }
 }
 
--(void)moreClicked
-{
-    if ([self.delegate respondsToSelector:@selector(moreButtonClicked)]) {
-        
-        [self.delegate moreButtonClicked];
-        
-    }
-}
 
 
 -(void)initButton:(UIButton*)btn{

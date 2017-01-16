@@ -12,8 +12,6 @@
 
 -(void)buttonAndId:(NSInteger)index;
 
-@optional
--(void)moreButtonClicked;
 
 @end
 

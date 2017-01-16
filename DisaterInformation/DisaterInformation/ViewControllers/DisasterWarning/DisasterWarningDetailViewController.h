@@ -11,4 +11,7 @@
 @interface DisasterWarningDetailViewController : BaseViewController
 
 @property(nonatomic ,assign)NSInteger news_ID;
+@property(nonatomic, copy)NSString *picStr;
+
+
 @end

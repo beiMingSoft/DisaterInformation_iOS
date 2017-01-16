@@ -22,6 +22,8 @@ static NSString *cellIde = @"volunteerCell";
 @property(nonatomic ,strong)UITableView *tableView;
 @property(nonatomic ,strong)NSMutableArray *volunteerArr;
 @property(nonatomic ,strong)NSMutableArray *personArr;
+@property(nonatomic ,assign)BOOL isHidden;
+@property(nonatomic ,strong) UIView *screenView;
 
 @end
 
@@ -48,18 +50,18 @@ static NSString *cellIde = @"volunteerCell";
 {
         for (int i = 0; i < 10; i++) {
             VolunteerInquiriesModel *model = [[VolunteerInquiriesModel alloc]init ];
-            model.name = [NSString stringWithFormat:@"张三%d",i];
+            model.name = [NSString stringWithFormat:@"ZhangSan%d",i];
             model.tel = [NSString stringWithFormat:@"1821%d98712%d",i,i];
-            model.address = @"北京市海淀区上地九街中关村软件园微软大厦1101室";
-            model.imageStr = @"home_btn_travel";
+            model.address = @"Room 1101, Microsoft Building, Zhongguancun Software Park, Shangdi Jiujie, Haidian District, Beijing";
+            model.imageStr = @"UserImage";
             [self.personArr addObject:model];
         }
         for (int i = 0; i < 5; i++) {
             VolunteerInquiriesModel *model = [[VolunteerInquiriesModel alloc]init ];
-            model.name = [NSString stringWithFormat:@"李四%d",i];
+            model.name = [NSString stringWithFormat:@"LiSi%d",i];
             model.tel = [NSString stringWithFormat:@"1821%d98712%d",i,i];
-            model.address = @"昌平区沙河镇于新家园1111室";
-            model.imageStr = @"home_btn_travel";
+            model.address = @"Changping District Shahe Town in the new home 1111 room";
+            model.imageStr = @"UserImage";
             [self.volunteerArr addObject:model];
         }
 }
@@ -76,25 +78,30 @@ static NSString *cellIde = @"volunteerCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"志愿者查询";
     self.view.backgroundColor = [UIColor whiteColor];
     isPerson = NO;
     [self createHeadView];
     [self createData];
+  
     [self.view addSubview:self.tableView];
+    self.isHidden = YES;
     self.tableView.tableFooterView = [[UIView alloc]init ];
 }
 
 -(void)createHeadView
 {
-    NSArray *arr = @[@"志愿组织",@"个人组织"];
-    LSSwitchTitleView *switchTitleView = [[LSSwitchTitleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titleArray:arr textColor:[UIColor redColor] selectedColor:[UIColor colorWithRGBString:COLOR_YELLOW_1A1A1A]lineViewColor: [UIColor colorWithRed:0.22f green:0.65f blue:0.85f alpha:1.00f] bgColor:[UIColor whiteColor] lineViewColor:COLOR_LINEVIEW_F0F0F  selecte:^(NSInteger index) {
+    NSArray *arr = @[@"Organization",@"personal"];
+    LSSwitchTitleView *switchTitleView = [[LSSwitchTitleView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 40) titleArray:arr textColor:[UIColor colorWithRGBString:COLOR_YELLOW_1A1A1A] selectedColor:[UIColor colorWithRGBString:COLOR_009fe8] lineViewColor: [UIColor colorWithRGBString:COLOR_009fe8] bgColor:[UIColor whiteColor] lineViewColor:COLOR_LINEVIEW_F0F0F  selecte:^(NSInteger index) {
                 switch (index) {
             case 0:
                         isPerson = NO;
+                        self.navigationItem.hidesBackButton = YES;
+                        self.navigationItem.rightBarButtonItem.customView.hidden=YES;
                 break;
             case 1:
                         isPerson = YES;
+                        self.navigationItem.rightBarButtonItem = [ToolObject backBarButtonWithImageName:@"screen_icon" select:@selector(searchAction) target:self];
+                        
                         
                 break;
             default:
@@ -146,11 +153,61 @@ static NSString *cellIde = @"volunteerCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.screenView removeFromSuperview];
+    self.isHidden  = !self.isHidden;
+
     VolunteerInDetailViewController * vdvc = [[VolunteerInDetailViewController alloc]init ];
     [self.navigationController pushViewController:vdvc animated:YES];
 }
 
 
+-(void)searchAction
+{
+    if (self.isHidden) {
+            [self.view addSubview:self.screenView];
+        self.isHidden  = !self.isHidden;
+    }else{
+        [self.screenView removeFromSuperview];
+        self.isHidden  = !self.isHidden;
+    }
+}
 
 
+-(UIView *)screenView
+{
+    NSArray *titles = @[@"Medicine",@"Teach",@"Doctor",@"Repair",@"Welder"];
+    if (!_screenView) {
+        _screenView  = [[UIView alloc]initWithFrame:CGRectMake(DEVICE_WIDTH - 100, 64, 100, titles.count * 30) ];
+        _screenView.backgroundColor = [UIColor colorWithRed:128/255 green:128/255 blue:128/255 alpha:0.7];
+        for (int i = 0 ; i < titles.count ; i++) {
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            button.frame = CGRectMake(0,  30 * i, 100, 30);
+            [button setTitle:titles[i] forState:UIControlStateNormal];
+            button.tag = 9999 + i;
+            [button addTarget:self action:@selector(screenAction:) forControlEvents:UIControlEventTouchUpInside];
+            [_screenView addSubview:button];
+            
+            UIView *lineView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(button.frame), 100, 1) ];
+            lineView.backgroundColor = [UIColor whiteColor];
+            [_screenView addSubview:lineView];
+        }
+        
+    }
+    return _screenView;
+}
+
+-(void)screenAction:(UIButton *)sender
+{
+    [self.screenView removeFromSuperview];
+    self.isHidden = !self.isHidden;
+}
+
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+
+    [self.screenView removeFromSuperview];
+    self.isHidden = !self.isHidden;
+
+}
 @end

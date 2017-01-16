@@ -87,6 +87,28 @@
 
 
 
+//灾害信息
+#define COLOR_009fe8            @"009fe8"//主色调
+
+#define COLOR_27d983             @"22bf73"
+#define COLOR_22bf73             @"1fad69"
+
+#define COLOR_08abe8             @"08abe8"
+#define COLOR_00d5e8             @"00d5e8"
+
+#define COLOR_00bbcc            @"00bbcc"
+#define COLOR_0697cc             @"0697cc"
+
+#define COLOR_5870e8           @"5870e8"
+#define COLOR_4e63cc           @"4e63cc"
+
+#define COLOR_ef8666             @"ef8666" //图标背景色
+
+
+
+
+
+
 #define font11 [UIFont systemFontOfSize:11]
 #define font12 [UIFont systemFontOfSize:12]
 #define font13 [UIFont systemFontOfSize:13]

@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置导航栏背景颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.09f green:0.60f blue:0.83f alpha:1.00f]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0.09f green:0.60f blue:0.83f alpha:1.00f]];
+    
+    [[UINavigationBar appearance]setBarTintColor:[UIColor colorWithRGBString:COLOR_009fe8] ];
     
     /**
      *  设置导航栏字体颜色

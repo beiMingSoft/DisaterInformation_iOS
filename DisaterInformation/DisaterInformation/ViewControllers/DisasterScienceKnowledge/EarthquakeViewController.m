@@ -48,13 +48,14 @@ typedef NS_ENUM(NSInteger,DisasterType){
     self.view.backgroundColor = [UIColor whiteColor];
 
     if (self.disasterType == 0) {
-        _dataArray = [[NSMutableArray alloc]initWithObjects:@"地震小知识",@"地震逃生技巧",@"地震自救互救", nil ];
+     
+        _dataArray = [[NSMutableArray alloc]initWithObjects:@"Earthquake science knowledge",@"the cause of the earthquake" ,nil ];
     }else if (self.disasterType == 1){
     
-        _dataArray = [[NSMutableArray alloc]initWithObjects:@"滑坡、泥石流、崩塌的防范1",@"滑坡、泥石流、崩塌的防范2", nil ];
+        _dataArray = [[NSMutableArray alloc]initWithObjects:@"How the debris flow is formed", nil ];
 
     }else{
-        _dataArray = [[NSMutableArray alloc]initWithObjects:@"暴雨洪涝的防范1",@"暴雨洪涝的防范2",@"冰凌洪水、山洪的防范", nil ];
+//        _dataArray = [[NSMutableArray alloc]initWithObjects:@"暴雨时如何形成的",@"暴雨会造成什么样的后果",@"在遇到暴雨该如何避险", nil ];
     
     }
     [self.view addSubview:self.tableView];
@@ -93,16 +94,16 @@ typedef NS_ENUM(NSInteger,DisasterType){
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     HomeDetailViewController *hvc = [[HomeDetailViewController alloc]init ];
     if (self.disasterType == 0) {
-        hvc.news_Id = indexPath.row;
+        hvc.news_Id = indexPath.row + 1000;
 
     }else if (self.disasterType == 1){
-       hvc.news_Id  = indexPath.row + 20;
+       hvc.news_Id  = indexPath.row + 2000;
     }else{
         hvc.news_Id = indexPath.row + 10;
-    
     }
     [self pushVC:hvc];
     

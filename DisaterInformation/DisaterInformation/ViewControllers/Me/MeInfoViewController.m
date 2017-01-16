@@ -79,8 +79,16 @@ static NSString *meCellIde = @"meCell";
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(150))];
-    headView.backgroundColor = [UIColor orangeColor];
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, GMLAYOUTRATE(130))];
+    UIImageView *imageView = [[UIImageView alloc]init ];
+    imageView.image = [UIImage imageNamed:@"UserImage"];
+    imageView.frame = CGRectMake((DEVICE_WIDTH - 80)/2, 20, 80, 80);
+    [headView addSubview:imageView];
+    headView.backgroundColor = [UIColor whiteColor];
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMinX(imageView.frame), CGRectGetMaxY(imageView.frame)+10, 120, 20) ];
+    label.text = @"jame Xuezea";
+    label.font = font14;
+    [headView addSubview:label];
     return headView;
 }
 
@@ -90,9 +98,35 @@ static NSString *meCellIde = @"meCell";
     return GMLAYOUTRATE(150);
 }
 
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
 
+    UIView *footView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, DEVICE_HEIGHT - 130 - 7 *44) ];
 
+    UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [logoutButton setBackgroundColor:[UIColor colorWithRGBString:COLOR_009fe8 ]];
+    [logoutButton setTitle:@"Sign Out" forState:UIControlStateNormal];
+    logoutButton.frame = CGRectMake(30, 50, DEVICE_WIDTH - 60, 40);
+    [logoutButton addTarget:self action:@selector(logoutAction:) forControlEvents:UIControlEventTouchUpInside];
+    [footView addSubview:logoutButton];
+    
+    
+    return footView;
 
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return DEVICE_HEIGHT - 130 - 7 *44;
+
+}
+
+-(void)logoutAction:(UIButton *)btn
+{
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"userName"];
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 
 @end

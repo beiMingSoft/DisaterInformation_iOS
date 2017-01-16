@@ -9,6 +9,7 @@
 #import "RestorationListViewController.h"
 #import "ZJScrollPageViewDelegate.h"
 #import "TestCell.h"
+#import "RestoraDetailViewController.h"
 @interface RestorationListViewController ()<ZJScrollPageViewChildVcDelegate,UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView *baseTableView;
 @property (nonatomic, assign) NSInteger index;
@@ -30,13 +31,10 @@
 }
 -(void)createData
 {
-    _dataArray = [[NSMutableArray alloc]init ];
- 
-    [_dataArray addObject:@"陕西省人民政府办公厅关于印发山西省气象灾害应急预案的通知"];
-    [_dataArray addObject:@"自然灾害救助条例"];
-    [_dataArray  addObject:@"安徽省自然灾害救助办法"];
-    
-
+       _dataArray = [[NSMutableArray alloc]init ];
+       [_dataArray addObject:@"Nepal post-earthquake reconstruction post-earthquake reconstruction and reconstruction policy"];
+      [_dataArray addObject:@"Natural Disaster Relief Ordinance"];
+      [_dataArray addObject:@"Bangladesh Natural Disaster Relief Measures Ordinance"];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -67,5 +65,15 @@
         // 可以做自己想操作的，比如网络请求
     }
 }
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    RestoraDetailViewController *rdvc = [[RestoraDetailViewController alloc]init ];
+    rdvc.title = self.dataArray[indexPath.row];
+    [self pushVC:rdvc];
+}
+
+
 
 @end

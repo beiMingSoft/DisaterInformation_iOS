@@ -11,6 +11,9 @@
 #import "DisasterWarningCell.h"
 #import "DisasterWarningModel.h"
 #import "DisasterWarningDetailViewController.h"
+#import "WaringTableViewCell.h"
+static NSString *waringCell = @"cell";
+
 @interface DisasterWarningViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic ,strong)UITableView *tableView;
@@ -48,7 +51,6 @@
     [self.view addSubview:self.tableView];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100.0f;
-    self.title = @"预警公告";
 }
 
 //z制造假数据
@@ -58,25 +60,24 @@
        
         DisasterWarningModel * model = [[DisasterWarningModel alloc]init ];
         if (i == 0 ){
-            model.mainTitle = @"白云鄂博矿区气象局发布道路结冰黄色预警[III级/较大]";
+            model.mainTitle = @"Baiyun Obo Mining District Meteorological Bureau issued road icing yellow warning [III grade / larger]";
             model.time = @"1483632000";
-            model.from = @"白云鄂博矿区气象局";
+            model.from = @"Bureau of Meteorology, Bayan Obo Mining Area";
             model.news_Id = i;
         }else  if( i == 1){
-            model.mainTitle = @"广西防城港市发布大风蓝色预警";
+            model.mainTitle = @"Fangchenggang City, Guangxi issued a strong blue warning";
             model.time = @"1482972540";
-            model.from = @"中国气象局网站";
+            model.from = @"China Meteorological Administration website";
             model.news_Id = i;
-
+            model.urlStr = @"guangxi_waring_icon";
+            model.isPic = YES;
         }else {
 //            model.urlStr = @"disater";
 //            model.isPic = YES;
             model.time = @"1451868540";
-            model.mainTitle = @"2017年1月云南及周边地震活动概况";
-            model.from = @"地震监测中心";
+            model.mainTitle = @"A SURVEY OF SEISMICITY IN YUNAN AND ITS PERIPHERY IN JANUARY";
+            model.from = @"Earthquake Monitoring Center";
             model.news_Id = i;
-
-
         }
         [self.homeDataArray addObject:model];
     }
@@ -95,20 +96,25 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DisasterWarningCell *cell = [tableView dequeueReusableCellWithIdentifier:@"warningCell"];
     DisasterWarningModel *model = self.homeDataArray[indexPath.row];
+    WaringTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:waringCell];
+    
     if (cell == nil) {
-        cell = [[[NSBundle mainBundle]loadNibNamed:@"DisasterWarningCell" owner:self options:nil]lastObject];
+        cell = [[WaringTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:waringCell model:model ];
     }
+//    [cell setModel:model];
+    cell.urlImageView.image = [UIImage imageNamed:model.urlStr];
+    cell.mainTitleLabel.text = model.mainTitle;
+    cell.mainTitleLabel.font = font14;
     cell.timeLabel.text = [self updateTimeForRow:model.time];
-
-    [cell setModel:model];
+    cell.fromLabel.text = model.from;
     return cell;
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+//
 //    DisasterWarningModel *model = self.homeDataArray[indexPath.row];
 //    return model.cellHeight;
     
@@ -130,6 +136,7 @@
     DisasterWarningModel *model = self.homeDataArray[indexPath.row];
     DisasterWarningDetailViewController *wdvc = [[DisasterWarningDetailViewController alloc]init ];
     wdvc.news_ID = model.news_Id;
+    wdvc.picStr = model.urlStr;
     [self pushVC:wdvc];
 }
 
