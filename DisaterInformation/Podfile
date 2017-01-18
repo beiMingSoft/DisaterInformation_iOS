@@ -1,6 +1,4 @@
-
-
-#tform :ios, '8.0'
+platform :ios, '8.0'
 inhibit_all_warnings!
 
 target 'DisaterInformation' do
@@ -23,9 +21,7 @@ pod 'ShareSDK3/ShareSDKUI'
 # 扩展模块（在调用可以弹出我们UI分享方法的时候是必需的）
 pod 'ShareSDK3/ShareSDKExtension'
 
-pod "QBImagePickerController"
-
-
+pod 'TZImagePickerController'
 
 
 

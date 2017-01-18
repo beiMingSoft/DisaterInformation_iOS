@@ -18,8 +18,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Tw-qL-HO8"/>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uy1-c8-9q6">
                         <constraints>
-                            <constraint firstAttribute="width" constant="15" id="0ue-FV-gJ0"/>
-                            <constraint firstAttribute="height" constant="15" id="2dX-hc-MSb"/>
+                            <constraint firstAttribute="width" constant="10" id="0ue-FV-gJ0"/>
+                            <constraint firstAttribute="height" constant="10" id="2dX-hc-MSb"/>
                         </constraints>
                         <state key="normal" image="delect_icon"/>
                     </button>
@@ -27,8 +27,8 @@
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2Tw-qL-HO8" secondAttribute="trailing" id="4JG-hu-Hu9"/>
-                <constraint firstAttribute="trailing" secondItem="uy1-c8-9q6" secondAttribute="trailing" constant="4" id="Phr-zZ-Ms6"/>
-                <constraint firstItem="uy1-c8-9q6" firstAttribute="top" secondItem="NIc-91-bzA" secondAttribute="top" constant="2" id="aX5-53-Jqq"/>
+                <constraint firstAttribute="trailing" secondItem="uy1-c8-9q6" secondAttribute="trailing" id="Phr-zZ-Ms6"/>
+                <constraint firstItem="uy1-c8-9q6" firstAttribute="top" secondItem="NIc-91-bzA" secondAttribute="top" id="aX5-53-Jqq"/>
                 <constraint firstAttribute="bottom" secondItem="2Tw-qL-HO8" secondAttribute="bottom" id="ddU-Ie-k0K"/>
                 <constraint firstItem="2Tw-qL-HO8" firstAttribute="top" secondItem="NIc-91-bzA" secondAttribute="top" id="geA-bB-FEk"/>
                 <constraint firstItem="2Tw-qL-HO8" firstAttribute="leading" secondItem="NIc-91-bzA" secondAttribute="leading" id="ihn-0d-3eg"/>

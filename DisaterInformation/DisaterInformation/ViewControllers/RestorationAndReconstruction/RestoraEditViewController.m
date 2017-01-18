@@ -6,23 +6,27 @@
 //  Copyright © 2017年 wasterd. All rights reserved.
 //
 
+/*
+ 恢复重建上传资料
+ */
+
 #import "RestoraEditViewController.h"
 #import "CBBTView.h"
-#import <QBImagePickerController/QBImagePickerController.h>
 #import "ShowEditItem.h"
 #import "RRZSendShowTextCell.h"
 #import "RRZSendShowImageCell.h"
+#import "TZImagePickerController.h"
+
 
 static NSString *sendShowTextCellID = @"SendShowTextCellID";
 static NSString *sendShowImageCellID = @"SendShowImageCellID";
-@interface RestoraEditViewController ()<UITextViewDelegate,QBImagePickerControllerDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface RestoraEditViewController ()<UITextViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITableViewDelegate,UITableViewDataSource,TZImagePickerControllerDelegate>
 @property(nonatomic ,strong)UIScrollView *scrollView;
 @property(nonatomic ,strong) CBBTView * titleTextView;
 @property(nonatomic ,strong) CBBTView * contentTextView;
 
 @property (strong, nonatomic)UITableView *myTableView;
 @property (nonatomic,retain) UIImagePickerController *imagePickerController;
-@property (nonatomic,retain) QBImagePickerController *picker;
 @property (nonatomic,retain) ShowEditItem *showEditItem;
 @property (weak, nonatomic) CBBTView *textView;
 
@@ -47,85 +51,62 @@ static NSString *sendShowImageCellID = @"SendShowImageCellID";
 - (ShowEditItem*)showEditItem{
     if (!_showEditItem) {
         _showEditItem = [[ShowEditItem alloc]init];
-        _showEditItem.selectedImages = [NSMutableArray array];
-        _showEditItem.selectedAssets = [NSMutableArray array];
+        _showEditItem.selectedImages = @[].mutableCopy;
+        _showEditItem.selectedAssets = @[].mutableCopy;
     }
     return _showEditItem;
 }
 
 
 
-- (QBImagePickerController*)picker{
-    if (!_picker) {
-        _picker = [[QBImagePickerController alloc]init];
-        _picker.delegate = self;
-        _picker.automaticallyAdjustsScrollViewInsets = YES;
-        _picker.minimumNumberOfSelection = 1;
-        _picker.maximumNumberOfSelection = 11;
-        //指定显示的相册
-        _picker.assetCollectionSubtypes = @[                               @(PHAssetCollectionSubtypeSmartAlbumUserLibrary), //相机胶卷
-                                                                           //@(PHAssetCollectionSubtypeAlbumMyPhotoStream), //我的照片流
-                                                                           //@(PHAssetCollectionSubtypeSmartAlbumPanoramas), //全景图
-                                                                           //@(PHAssetCollectionSubtypeSmartAlbumVideos), //视频
-                                                                           //@(PHAssetCollectionSubtypeSmartAlbumBursts) //连拍模式拍摄的照片
-                                                                           ];
-        //设置媒体类型
-        _picker.mediaType = QBImagePickerMediaTypeAny;//图片与视频
-        //设置每行显示的图像数量
-        _picker.numberOfColumnsInPortrait = 4;//竖屏下每行4个
-        _picker.numberOfColumnsInLandscape = 7;//横惬意下每行7个
-        _picker.prompt = @"请选择图片";
-        _picker.showsNumberOfSelectedAssets = YES;
-        _picker.allowsMultipleSelection = YES;
-    }
-    [_picker.selectedAssets removeAllObjects];
-    [_picker.selectedAssets addObjectsFromArray:self.showEditItem.selectedAssets];
-    return _picker;
-}
-- (UIImagePickerController*)imagePickerController{
-    if (!_imagePickerController) {
-        _imagePickerController  = [[UIImagePickerController alloc] init];
-        _imagePickerController.delegate = self;
-        _imagePickerController.allowsEditing = NO;//设置可编辑
-    }
-    return _imagePickerController;
-}
-
-
 #pragma mark - UIAlertController
 - (void)showActionForPhoto{
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"请选择照片路径" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *photoAction = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
-            NSLog(@"该设备不支持相机");
-        }else{
-            self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-            [self.navigationController presentViewController:self.imagePickerController
-                                                    animated:YES
-                                                  completion:nil];
-        }
+    TZImagePickerController *imagePickerVc = [[TZImagePickerController alloc]initWithMaxImagesCount:9 delegate:self ];
+    // 你可以通过block或者代理，来得到用户选择的照片.
+    [imagePickerVc setDidFinishPickingPhotosHandle:^(NSArray<UIImage *> *photos, NSArray * assets, BOOL isSelectOriginalPhoto) {
+        self.showEditItem.selectedImages = [NSMutableArray arrayWithArray:photos];
+        self.showEditItem.selectedAssets = [NSMutableArray arrayWithArray:assets];
+        [self.myTableView reloadData];
     }];
     
+
     
-    UIAlertAction *cameroAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        
-        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
-            
-            NSLog(@"该设备不支持从相册选取文件");
-        }else{
-            
-            [self presentViewController:self.picker animated:YES completion:nil];
-        }
-    }];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    [alertController addAction:cancelAction];
-    [alertController addAction:photoAction];
-    [alertController addAction:cameroAction];
+    [self presentViewController:imagePickerVc animated:YES completion:nil];
     
-    [self presentViewController:alertController animated:YES completion:nil];
+    
+//    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"请选择照片路径" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+//    UIAlertAction *photoAction = [UIAlertAction actionWithTitle:@"相机" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+//            NSLog(@"该设备不支持相机");
+//        }else{
+//            self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+//            [self.navigationController presentViewController:self.imagePickerController
+//                                                    animated:YES
+//                                                  completion:nil];
+//        }
+//    }];
+//    
+//    
+//    UIAlertAction *cameroAction = [UIAlertAction actionWithTitle:@"相册" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        
+//        if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+//            
+//            NSLog(@"该设备不支持从相册选取文件");
+//        }else{
+//            
+//            [self presentViewController:self.picker animated:YES completion:nil];
+//        }
+//    }];
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    [alertController addAction:cancelAction];
+//    [alertController addAction:photoAction];
+//    [alertController addAction:cameroAction];
+//    
+//    [self presentViewController:alertController animated:YES completion:nil];
     
 }
 
@@ -190,14 +171,9 @@ static NSString *sendShowImageCellID = @"SendShowImageCellID";
     }
 }
 
-
-
-
 -(void)setupNavItem
 {
     self.navigationItem.rightBarButtonItem = [ToolObject backBarButtonWithImageName:@"commit_icon" select:@selector(commitActionClicked:) target:self];
-
-
 }
 
 -(void)commitActionClicked:(UIButton *)btn
@@ -205,66 +181,6 @@ static NSString *sendShowImageCellID = @"SendShowImageCellID";
     MMLog(@"发布");
 
     [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-#pragma mark - UIImagePickerControllerDelegate
-
-//拍照回调
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    
-    UIImage *pickerImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    //添加照片
-    [self.showEditItem.selectedImages addObject:pickerImage];
-    [self.myTableView reloadData];
-    
-    [picker dismissViewControllerAnimated:YES completion:^{}];
-    
-}
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
-    [picker dismissViewControllerAnimated:YES completion:^{}];
-}
-
-
-
-//相册方法回调
-- (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController didFinishPickingAssets:(NSArray *)assets{
-    
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
-        //清数据
-        [self.showEditItem.selectedImages removeAllObjects];
-        [self.showEditItem.selectedAssets removeAllObjects];
-        
-        if (assets.count == 0) {
-            [self.myTableView reloadData];
-            [self dismissViewControllerAnimated:YES completion:nil];
-            return ;
-        }
-        
-        //将选好的图片资源存入数组
-        //1.PHAsset数组
-        [self.showEditItem.selectedAssets addObjectsFromArray:assets];
-        //2.照片数组
-        for (PHAsset *asset in self.showEditItem.selectedAssets) {
-            [[PHImageManager defaultManager]requestImageForAsset:asset
-                                                      targetSize:CGSizeMake(asset.pixelWidth, asset.pixelHeight)
-                                                     contentMode:PHImageContentModeDefault
-                                                         options:nil
-                                                   resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-                                                       [self.showEditItem.selectedImages addObject:result];
-                                                   }];
-            
-        }
-        [self.myTableView reloadData];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    });
-}
-                   
-                   
-                   
--(void)qb_imagePickerControllerDidCancel:(QBImagePickerController *)imagePickerController{
-     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
@@ -355,17 +271,6 @@ static NSString *sendShowImageCellID = @"SendShowImageCellID";
     
     return imageData;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 

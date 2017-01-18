@@ -33,7 +33,6 @@ static NSString *InforCell = @"cellIde";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"消息";
     [self.view addSubview:self.tableView];
     self.tableView.showsVerticalScrollIndicator = NO;
     self.tableView.showsHorizontalScrollIndicator = NO;
@@ -53,8 +52,8 @@ static NSString *InforCell = @"cellIde";
     if (!cell) {
         cell = [[[NSBundle mainBundle]loadNibNamed:@"InfoCell" owner:self options:nil ]lastObject ];
     }
-    cell.titleLabel.text = @"什么是热带风暴（Tropicalstorm）？";
-    cell.descriptionLabel.text = @"热带风暴是所有自然灾害中最具破坏力的.每年飓风都从海洋横扫至内陆地区.强劲的风力和暴风雨过后留下的只是一片狼藉。";
+    cell.titleLabel.text = @"What is a tropical storm（Tropicalstorm）？";
+    cell.descriptionLabel.text = @"Tropical storms are the most devastating of all natural disasters, and every year the hurricane sweeps from the ocean to the interior, where strong winds and storms leave behind only a mess.。";
     cell.timeLabel.text = [self updateTimeForRow:@"1483493403"];
     return cell;
 }

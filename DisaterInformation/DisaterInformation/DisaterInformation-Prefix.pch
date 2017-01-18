@@ -17,6 +17,7 @@
 #import "SDAutoLayout.h"
 #import "NSString+size.h"
 #import "ToolObject.h"
+#import "NSString+size.h"
 
 
 #endif /* DisaterInformation_Prefix_pch */

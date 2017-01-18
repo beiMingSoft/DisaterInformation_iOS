@@ -63,6 +63,8 @@ static NSString *waringCell = @"cell";
             model.mainTitle = @"Baiyun Obo Mining District Meteorological Bureau issued road icing yellow warning [III grade / larger]";
             model.time = @"1483632000";
             model.from = @"Bureau of Meteorology, Bayan Obo Mining Area";
+            model.urlStr = @"guangxi_waring_icon";
+            model.isPic = YES;
             model.news_Id = i;
         }else  if( i == 1){
             model.mainTitle = @"Fangchenggang City, Guangxi issued a strong blue warning";
@@ -74,10 +76,16 @@ static NSString *waringCell = @"cell";
         }else {
 //            model.urlStr = @"disater";
 //            model.isPic = YES;
+            model.isPic = YES;
+
             model.time = @"1451868540";
-            model.mainTitle = @"A SURVEY OF SEISMICITY IN YUNAN AND ITS PERIPHERY IN JANUARY";
+//            model.mainTitle = @"A Survey of seismicity in yunan and ITS periphey in january ";
+
+            model.mainTitle = @"A Survey of seismicity";
             model.from = @"Earthquake Monitoring Center";
             model.news_Id = i;
+            model.urlStr = @"guangxi_waring_icon";
+
         }
         [self.homeDataArray addObject:model];
     }
@@ -137,6 +145,7 @@ static NSString *waringCell = @"cell";
     DisasterWarningDetailViewController *wdvc = [[DisasterWarningDetailViewController alloc]init ];
     wdvc.news_ID = model.news_Id;
     wdvc.picStr = model.urlStr;
+    wdvc.mainTitle = model.mainTitle;
     [self pushVC:wdvc];
 }
 

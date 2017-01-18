@@ -99,8 +99,17 @@
 #define COLOR_00bbcc            @"00bbcc"
 #define COLOR_0697cc             @"0697cc"
 
-#define COLOR_5870e8           @"5870e8"
-#define COLOR_4e63cc           @"4e63cc"
+//#define COLOR_00bbcc            @"9bb200"
+//#define COLOR_0697cc             @"b2cc00"
+
+//
+//#define COLOR_5870e8           @"5870e8"
+//#define COLOR_4e63cc           @"4e63cc"
+
+#define COLOR_5870e8           @"b2cc00"
+#define COLOR_4e63cc           @"9bb200"
+
+
 
 #define COLOR_ef8666             @"ef8666" //图标背景色
 

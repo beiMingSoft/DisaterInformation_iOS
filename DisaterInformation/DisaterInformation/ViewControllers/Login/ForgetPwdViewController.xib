@@ -34,11 +34,11 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="Tfr-1U-xie" firstAttribute="top" secondItem="J14-q9-UmQ" secondAttribute="top" constant="15" id="6GR-NM-eft"/>
-                        <constraint firstAttribute="height" constant="50" id="9Vt-bR-FsA"/>
-                        <constraint firstItem="jbt-nz-RzU" firstAttribute="top" secondItem="J14-q9-UmQ" secondAttribute="top" constant="10" id="TJT-qX-lO7"/>
+                        <constraint firstItem="Tfr-1U-xie" firstAttribute="top" secondItem="J14-q9-UmQ" secondAttribute="top" constant="5" id="6GR-NM-eft"/>
+                        <constraint firstAttribute="height" constant="30" id="9Vt-bR-FsA"/>
+                        <constraint firstItem="jbt-nz-RzU" firstAttribute="top" secondItem="J14-q9-UmQ" secondAttribute="top" constant="5" id="TJT-qX-lO7"/>
                         <constraint firstItem="Tfr-1U-xie" firstAttribute="leading" secondItem="J14-q9-UmQ" secondAttribute="leading" constant="10" id="ic7-cO-fLA"/>
-                        <constraint firstAttribute="bottom" secondItem="jbt-nz-RzU" secondAttribute="bottom" constant="10" id="l1W-55-amQ"/>
+                        <constraint firstAttribute="bottom" secondItem="jbt-nz-RzU" secondAttribute="bottom" constant="5" id="l1W-55-amQ"/>
                         <constraint firstAttribute="trailing" secondItem="jbt-nz-RzU" secondAttribute="trailing" constant="10" id="mj1-J0-NIV"/>
                         <constraint firstItem="jbt-nz-RzU" firstAttribute="leading" secondItem="Tfr-1U-xie" secondAttribute="trailing" constant="10" id="vPr-bb-AN5"/>
                     </constraints>
@@ -59,21 +59,21 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="AN0-rD-HD3"/>
-                        <constraint firstAttribute="bottom" secondItem="2C9-cc-HLj" secondAttribute="bottom" constant="10" id="F9q-Ez-4br"/>
+                        <constraint firstAttribute="height" constant="30" id="AN0-rD-HD3"/>
+                        <constraint firstAttribute="bottom" secondItem="2C9-cc-HLj" secondAttribute="bottom" constant="5" id="F9q-Ez-4br"/>
                         <constraint firstItem="2C9-cc-HLj" firstAttribute="leading" secondItem="63O-R9-MrQ" secondAttribute="trailing" constant="16" id="bWb-H6-lD0"/>
                         <constraint firstAttribute="trailing" secondItem="2C9-cc-HLj" secondAttribute="trailing" constant="10" id="hmq-uv-pRB"/>
                         <constraint firstItem="63O-R9-MrQ" firstAttribute="leading" secondItem="d8y-Kp-G9J" secondAttribute="leading" constant="10" id="kKC-hi-jz7"/>
-                        <constraint firstItem="2C9-cc-HLj" firstAttribute="top" secondItem="d8y-Kp-G9J" secondAttribute="top" constant="10" id="lS3-bz-xcU"/>
-                        <constraint firstItem="63O-R9-MrQ" firstAttribute="top" secondItem="d8y-Kp-G9J" secondAttribute="top" constant="15" id="wXr-Ns-efh"/>
+                        <constraint firstItem="2C9-cc-HLj" firstAttribute="top" secondItem="d8y-Kp-G9J" secondAttribute="top" constant="5" id="lS3-bz-xcU"/>
+                        <constraint firstItem="63O-R9-MrQ" firstAttribute="top" secondItem="d8y-Kp-G9J" secondAttribute="top" constant="5" id="wXr-Ns-efh"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcf-Oi-emf">
                     <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="wZi-h8-Doe"/>
+                        <constraint firstAttribute="height" constant="30" id="wZi-h8-Doe"/>
                     </constraints>
-                    <state key="normal" title="获取验证码"/>
+                    <state key="normal" title="Code"/>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndV-sg-0EC" userLabel="thirdView">
                     <subviews>
@@ -91,13 +91,13 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="259-Ws-1wB" firstAttribute="top" secondItem="ndV-sg-0EC" secondAttribute="top" constant="15" id="6UW-Dm-KYK"/>
+                        <constraint firstItem="259-Ws-1wB" firstAttribute="top" secondItem="ndV-sg-0EC" secondAttribute="top" constant="5" id="6UW-Dm-KYK"/>
                         <constraint firstItem="259-Ws-1wB" firstAttribute="leading" secondItem="ndV-sg-0EC" secondAttribute="leading" constant="10" id="6dc-5d-bJZ"/>
                         <constraint firstItem="RCx-Fq-Cm6" firstAttribute="leading" secondItem="259-Ws-1wB" secondAttribute="trailing" constant="10" id="MIp-Ak-VFQ"/>
-                        <constraint firstItem="RCx-Fq-Cm6" firstAttribute="top" secondItem="ndV-sg-0EC" secondAttribute="top" constant="10" id="Utk-me-QJl"/>
-                        <constraint firstAttribute="bottom" secondItem="RCx-Fq-Cm6" secondAttribute="bottom" constant="10" id="ai3-9t-r0t"/>
+                        <constraint firstItem="RCx-Fq-Cm6" firstAttribute="top" secondItem="ndV-sg-0EC" secondAttribute="top" constant="5" id="Utk-me-QJl"/>
+                        <constraint firstAttribute="bottom" secondItem="RCx-Fq-Cm6" secondAttribute="bottom" constant="5" id="ai3-9t-r0t"/>
                         <constraint firstAttribute="trailing" secondItem="RCx-Fq-Cm6" secondAttribute="trailing" constant="10" id="fmg-mz-DyO"/>
-                        <constraint firstAttribute="height" constant="50" id="lPz-Wn-Jlm"/>
+                        <constraint firstAttribute="height" constant="30" id="lPz-Wn-Jlm"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0m3-oo-Td9">
@@ -105,7 +105,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="naX-w0-znp"/>
                     </constraints>
-                    <state key="normal" title="保存"/>
+                    <state key="normal" title="Submit"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.94126009806728117" green="0.95057950497883836" blue="0.95057950497883836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,7 +130,7 @@
                 <constraint firstItem="J14-q9-UmQ" firstAttribute="bottom" secondItem="Wcf-Oi-emf" secondAttribute="bottom" id="bVS-KM-WCp"/>
                 <constraint firstItem="ndV-sg-0EC" firstAttribute="top" secondItem="J14-q9-UmQ" secondAttribute="bottom" constant="8" id="g7W-bz-LaE"/>
                 <constraint firstItem="Wcf-Oi-emf" firstAttribute="top" secondItem="d8y-Kp-G9J" secondAttribute="bottom" constant="8" id="jc3-0X-1hm"/>
-                <constraint firstItem="0m3-oo-Td9" firstAttribute="top" secondItem="ndV-sg-0EC" secondAttribute="bottom" constant="149" id="zuI-2t-dMs"/>
+                <constraint firstItem="0m3-oo-Td9" firstAttribute="top" secondItem="ndV-sg-0EC" secondAttribute="bottom" constant="50" id="zuI-2t-dMs"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

@@ -12,6 +12,6 @@
 
 @property(nonatomic ,assign)NSInteger news_ID;
 @property(nonatomic, copy)NSString *picStr;
-
+@property(nonatomic ,copy)NSString *mainTitle;
 
 @end

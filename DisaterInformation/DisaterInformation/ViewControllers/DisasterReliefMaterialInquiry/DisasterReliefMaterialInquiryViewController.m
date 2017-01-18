@@ -129,7 +129,7 @@ static NSString *relief = @"reliefCell";
 -(void)createData{
     for (int i =0 ; i< 13; i++) {
         ReliefMaterialModel * model = [[ReliefMaterialModel alloc]init ];
-        model.MaterialsName = @"Drug";
+        model.MaterialsName = @"Drugasdasdasdasdasdasdasdasdasdasdasdasdas";
         model.urlImage = @"药品药箱";
         model.MaterialsNumbers = 9333;
         model.MaterialsAddress = @"No. 4 storage point";

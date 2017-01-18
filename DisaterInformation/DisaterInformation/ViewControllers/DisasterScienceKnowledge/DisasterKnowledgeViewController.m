@@ -7,11 +7,13 @@
 //
 
 #import "DisasterKnowledgeViewController.h"
-#import "DisasterKnowledgeCell.h"
+#import "KnowledgeCell.h"
 #import "EarthquakeViewController.h"
+
+
 static NSString *knowCell = @"knowledgeCell";
 
-@interface DisasterKnowledgeViewController ()<UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource>
+@interface DisasterKnowledgeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic ,strong)UICollectionView *collectionView;
 @property(nonatomic ,strong)NSMutableArray *dataArray;
 @property(nonatomic ,strong)NSArray *images;
@@ -25,6 +27,7 @@ static NSString *knowCell = @"knowledgeCell";
         _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain ];
         _tableView.dataSource = self;
         _tableView.delegate = self;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
 
@@ -40,15 +43,6 @@ static NSString *knowCell = @"knowledgeCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init ];
-//    self.collectionView =[[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:layout ];
-//    self.collectionView.backgroundColor = [UIColor whiteColor];
-//    self.collectionView.dataSource = self;
-//    self.collectionView.delegate = self;
-//    [self.view addSubview:self.collectionView];
-//    self.collectionView.showsVerticalScrollIndicator = NO;
-//    //注册cell
-//    [self.collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([DisasterKnowledgeCell class]) bundle:nil] forCellWithReuseIdentifier:knowCell];
     [self.view addSubview:self.tableView];
     self.images = @[@"equack_icon",@"debrisFlow_icon",@"flood_idcon",@"fir_icon",@"Hurricane_icon",];
 
@@ -58,32 +52,29 @@ static NSString *knowCell = @"knowledgeCell";
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
-
-    return 50;
+    return 60;
 }
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-
     return self.images.count;
 }
 
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIde"];
+    
+    KnowledgeCell *  cell = [tableView dequeueReusableCellWithIdentifier:knowCell];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cellIde" ];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"KnowledgeCell" owner:self options:nil  ]lastObject ];
+        
     }
-    cell.textLabel.text = self.dataArray[indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:self.images[indexPath.row]];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
+    cell.mainTitleLabel.text = self.dataArray[indexPath.row];
+    cell.iconImageView.image = [UIImage imageNamed:self.images[indexPath.row]];
     return cell;
 }
-
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

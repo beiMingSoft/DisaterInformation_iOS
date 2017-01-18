@@ -66,6 +66,7 @@ static NSString *cellID = @"RRZShowImageCCellID";
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     NSInteger num = self.item.selectedImages.count;
+    MMLog(@"%ld",num < 9? num+ 1: num);
     return num < 9? num+ 1: num;
 //    return  num;
 }
@@ -75,6 +76,8 @@ static NSString *cellID = @"RRZShowImageCCellID";
     RRZShowEditImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
     if (indexPath.row < self.item.selectedImages.count) {
         cell.img.image = self.item.selectedImages[indexPath.row];
+        cell.deleteBtn.hidden = NO;
+
     }else{
         cell.img.image = [UIImage imageNamed:@"拍照"];
         cell.deleteBtn.hidden = YES;

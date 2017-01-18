@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +17,7 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWa-t2-Jza">
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="7vJ-oa-7wm"/>
+                            <constraint firstAttribute="height" constant="16" id="2hg-Xz-U3i"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
@@ -26,31 +25,31 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2017-01-03" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0k3-3M-mQg">
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="2L5-Ld-yLJ"/>
-                            <constraint firstAttribute="height" constant="21" id="QtT-BG-MRF"/>
+                            <constraint firstAttribute="height" constant="16" id="3Ui-pm-7aV"/>
+                            <constraint firstAttribute="width" constant="100" id="bpc-O6-Gdv"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBd-Qf-Gm9">
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="ewk-nx-z76"/>
+                            <constraint firstAttribute="height" constant="30" id="WbW-7x-qvn"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="0k3-3M-mQg" secondAttribute="trailing" constant="8" id="6Ki-CJ-anD"/>
-                    <constraint firstItem="FWa-t2-Jza" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DUd-f2-o5N"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="gBd-Qf-Gm9" secondAttribute="trailing" constant="16" id="QdS-D0-PZU"/>
-                    <constraint firstItem="0k3-3M-mQg" firstAttribute="top" secondItem="gBd-Qf-Gm9" secondAttribute="bottom" constant="10" id="Qrf-mO-cez"/>
-                    <constraint firstItem="FWa-t2-Jza" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="VNH-if-COl"/>
-                    <constraint firstAttribute="trailing" secondItem="FWa-t2-Jza" secondAttribute="trailing" constant="16" id="lPr-nH-2So"/>
-                    <constraint firstItem="gBd-Qf-Gm9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="mAr-lh-qBm"/>
-                    <constraint firstItem="gBd-Qf-Gm9" firstAttribute="top" secondItem="FWa-t2-Jza" secondAttribute="bottom" constant="5" id="zDo-Pu-pcQ"/>
+                    <constraint firstAttribute="trailing" secondItem="gBd-Qf-Gm9" secondAttribute="trailing" constant="15" id="4wW-ga-Wph"/>
+                    <constraint firstItem="gBd-Qf-Gm9" firstAttribute="top" secondItem="FWa-t2-Jza" secondAttribute="bottom" constant="10" id="RQg-OT-3XZ"/>
+                    <constraint firstItem="gBd-Qf-Gm9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="c6j-Nn-MNJ"/>
+                    <constraint firstItem="FWa-t2-Jza" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="cPE-Ku-Hfh"/>
+                    <constraint firstItem="FWa-t2-Jza" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="oBN-lM-xgN"/>
+                    <constraint firstAttribute="trailing" secondItem="FWa-t2-Jza" secondAttribute="trailing" constant="16" id="wT7-3o-FdV"/>
+                    <constraint firstAttribute="bottom" secondItem="0k3-3M-mQg" secondAttribute="bottom" constant="10" id="woj-IT-xgV"/>
+                    <constraint firstAttribute="trailing" secondItem="0k3-3M-mQg" secondAttribute="trailing" constant="15" id="x0q-27-Njy"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

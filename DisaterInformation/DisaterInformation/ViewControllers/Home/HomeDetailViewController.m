@@ -44,7 +44,7 @@
 
     [self createData];
     [self.view addSubview:self.tableView];
-    
+    self.title = @"Detail";
     self.tableView.tableFooterView = [[UIView alloc]init ];
     self.tableView.showsVerticalScrollIndicator = NO;
 //    [self createImageView];
@@ -107,7 +107,7 @@
     }else if (self.news_Id == 51){
     
         self.images = [[NSMutableArray alloc]initWithObjects:@"pic-rengong1",@"pic-rengong2",@"pic-rengong3",@"pic-rengong4",@"pic-rengong5", nil ];
-        self.dataArray = [[NSMutableArray alloc]initWithObjects:@"Uncover the wounded person's clothes so that the chest is free to expand and does not affect breathing." "Remove the victim's food from the mouth and prevent debris." @ "Let the victim lie flat and open the airway" @ "Protect the injured person's head", @ "to the injured ventilation", nil ];
+        self.dataArray = [[NSMutableArray alloc]initWithObjects:@"Uncover the wounded person's clothes so that the chest is free to expand and does not affect breathing.", @"Remove the victim's food from the mouth and prevent debris.", @"Let the victim lie flat and open the airway", @"Protect the injured person's head", @"to the injured ventilation", nil ];
     
     }else if (self.news_Id == 1000){
     

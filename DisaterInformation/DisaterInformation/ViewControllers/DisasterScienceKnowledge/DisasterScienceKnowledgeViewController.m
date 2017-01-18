@@ -49,7 +49,6 @@ static NSString *secondIde = @"Scell";
 {
     [super viewDidLoad];
     [self createData];
-    self.title = @"灾害科普知识";
     self.titleArray = [NSMutableArray arrayWithObjects:@"地震",@"台风",@"泥石流",@"火灾",@"洪水",@"沙尘暴",@"龙卷风",@"更多",nil];
     
     self.imageArr = [NSMutableArray arrayWithObjects:@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel",@"home_btn_travel", nil];

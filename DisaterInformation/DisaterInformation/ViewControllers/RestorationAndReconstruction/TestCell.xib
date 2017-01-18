@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="320" height="43.5"/>
+                <frame key="frameInset" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my name is  mrj !!!!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3v-N4-iBf">
@@ -24,7 +24,7 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="s3v-N4-iBf" secondAttribute="bottom" id="0cf-eD-xX1"/>
                     <constraint firstAttribute="trailing" secondItem="s3v-N4-iBf" secondAttribute="trailing" constant="8" id="BZb-ED-7nm"/>
-                    <constraint firstItem="s3v-N4-iBf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="h6b-zv-02h"/>
+                    <constraint firstItem="s3v-N4-iBf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="h6b-zv-02h"/>
                     <constraint firstItem="s3v-N4-iBf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yL7-Jn-tCX"/>
                 </constraints>
             </tableViewCellContentView>

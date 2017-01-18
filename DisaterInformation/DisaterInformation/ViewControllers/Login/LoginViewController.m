@@ -89,13 +89,14 @@
     forgetPWDButton .layer.cornerRadius =  5;
     forgetPWDButton.layer.masksToBounds = YES;
     forgetPWDButton.layer.borderWidth = 0.5;
+    forgetPWDButton.titleLabel.font = font12;
     forgetPWDButton.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [forgetPWDButton addTarget:self action:@selector(forgetPasswordAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:forgetPWDButton];
     [forgetPWDButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.passwordTextField.mas_bottom).offset(15);
         make.left.equalTo(self.passwordTextField);
-        make.size.mas_equalTo(CGSizeMake(100, 30));
+        make.size.mas_equalTo(CGSizeMake(70, 20));
     }];
     
     //记住密码

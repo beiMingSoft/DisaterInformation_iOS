@@ -12,4 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *urlImageView;
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+
+
 @end

@@ -145,6 +145,12 @@
 		7182BFAC1E01746100BBF0D3 /* EvacuationSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFAB1E01746100BBF0D3 /* EvacuationSitesViewController.m */; };
 		7182BFB01E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFAF1E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m */; };
 		7182BFB41E0175D100BBF0D3 /* VolunteerInquiriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7182BFB31E0175D100BBF0D3 /* VolunteerInquiriesViewController.m */; };
+		7185EB0C1E2CCA0F0031AC9D /* KnowledgeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7185EB0A1E2CCA0F0031AC9D /* KnowledgeCell.m */; };
+		7185EB0D1E2CCA0F0031AC9D /* KnowledgeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7185EB0B1E2CCA0F0031AC9D /* KnowledgeCell.xib */; };
+		7185EB201E2DE2CE0031AC9D /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7185EB1E1E2DE2CE0031AC9D /* CollectionCell.m */; };
+		7185EB211E2DE2CE0031AC9D /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7185EB1F1E2DE2CE0031AC9D /* CollectionCell.xib */; };
+		7185EB251E2DEEDD0031AC9D /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7185EB231E2DEEDD0031AC9D /* ChangePasswordViewController.m */; };
+		7185EB261E2DEEDD0031AC9D /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7185EB241E2DEEDD0031AC9D /* ChangePasswordViewController.xib */; };
 		719865421E23355A008E90B6 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 719865411E23355A008E90B6 /* SearchViewController.m */; };
 		719865451E23424B008E90B6 /* MyCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 719865441E23424B008E90B6 /* MyCollectionViewController.m */; };
 		719865481E23427E008E90B6 /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 719865471E23427E008E90B6 /* PasswordManagerViewController.m */; };
@@ -398,6 +404,15 @@
 		7182BFAF1E01753300BBF0D3 /* DisasterReliefMaterialInquiryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisasterReliefMaterialInquiryViewController.m; sourceTree = "<group>"; };
 		7182BFB21E0175D100BBF0D3 /* VolunteerInquiriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolunteerInquiriesViewController.h; sourceTree = "<group>"; };
 		7182BFB31E0175D100BBF0D3 /* VolunteerInquiriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolunteerInquiriesViewController.m; sourceTree = "<group>"; };
+		7185EB091E2CCA0F0031AC9D /* KnowledgeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowledgeCell.h; sourceTree = "<group>"; };
+		7185EB0A1E2CCA0F0031AC9D /* KnowledgeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowledgeCell.m; sourceTree = "<group>"; };
+		7185EB0B1E2CCA0F0031AC9D /* KnowledgeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KnowledgeCell.xib; sourceTree = "<group>"; };
+		7185EB1D1E2DE2CE0031AC9D /* CollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionCell.h; sourceTree = "<group>"; };
+		7185EB1E1E2DE2CE0031AC9D /* CollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionCell.m; sourceTree = "<group>"; };
+		7185EB1F1E2DE2CE0031AC9D /* CollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		7185EB221E2DEEDD0031AC9D /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		7185EB231E2DEEDD0031AC9D /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		7185EB241E2DEEDD0031AC9D /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
 		719865401E23355A008E90B6 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		719865411E23355A008E90B6 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		719865431E23424B008E90B6 /* MyCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewController.h; sourceTree = "<group>"; };
@@ -883,6 +898,12 @@
 				715AD1AB1E28B7A80040E840 /* RRZShowEditImageCell.xib */,
 				715AD1A81E28B56F0040E840 /* UICustomCollectionView.h */,
 				715AD1A91E28B56F0040E840 /* UICustomCollectionView.m */,
+				7185EB091E2CCA0F0031AC9D /* KnowledgeCell.h */,
+				7185EB0A1E2CCA0F0031AC9D /* KnowledgeCell.m */,
+				7185EB0B1E2CCA0F0031AC9D /* KnowledgeCell.xib */,
+				7185EB1D1E2DE2CE0031AC9D /* CollectionCell.h */,
+				7185EB1E1E2DE2CE0031AC9D /* CollectionCell.m */,
+				7185EB1F1E2DE2CE0031AC9D /* CollectionCell.xib */,
 			);
 			path = CellClass;
 			sourceTree = "<group>";
@@ -963,6 +984,9 @@
 				719865441E23424B008E90B6 /* MyCollectionViewController.m */,
 				719865461E23427E008E90B6 /* PasswordManagerViewController.h */,
 				719865471E23427E008E90B6 /* PasswordManagerViewController.m */,
+				7185EB221E2DEEDD0031AC9D /* ChangePasswordViewController.h */,
+				7185EB231E2DEEDD0031AC9D /* ChangePasswordViewController.m */,
+				7185EB241E2DEEDD0031AC9D /* ChangePasswordViewController.xib */,
 				719865491E2342C0008E90B6 /* FeedbackViewController.h */,
 				7198654A1E2342C0008E90B6 /* FeedbackViewController.m */,
 				7198654C1E2342F0008E90B6 /* AboutUsViewController.h */,
@@ -1264,6 +1288,7 @@
 				71376B111E28A6A5002EBAA2 /* 拍照.png in Resources */,
 				7167A96E1E1F4D820074F371 /* 04滑坡、泥石流、崩塌的防范.jpg in Resources */,
 				7167A9C91E1F9A570074F371 /* DisasterKnowledgeCell.xib in Resources */,
+				7185EB0D1E2CCA0F0031AC9D /* KnowledgeCell.xib in Resources */,
 				715AD1AC1E28B7A80040E840 /* RRZShowEditImageCell.xib in Resources */,
 				715304A91E24F13E0025C38D /* flood_icon@3X.png in Resources */,
 				715304D71E250D2B0025C38D /* pic-rengong2.png in Resources */,
@@ -1278,6 +1303,7 @@
 				7167A96B1E1F4D2C0074F371 /* 06暴雨洪涝的防范2.jpg in Resources */,
 				713A6BC11E2634F800B7A89D /* Evacuation_icon.png in Resources */,
 				719865561E23B7A1008E90B6 /* InfoCell.xib in Resources */,
+				7185EB261E2DEEDD0031AC9D /* ChangePasswordViewController.xib in Resources */,
 				715304AD1E24F13E0025C38D /* Hurricane _icon@3X.png in Resources */,
 				715304C51E250B590025C38D /* pic-huapo2.png in Resources */,
 				715304B61E2506B30025C38D /* pic-selfsave3.png in Resources */,
@@ -1311,6 +1337,7 @@
 				713A6BCF1E27838F00B7A89D /* ForgetPwdViewController.xib in Resources */,
 				715304BC1E250A360025C38D /* pic-floor1.png in Resources */,
 				712BCDA01E0AA8C4001F4A9A /* TestCell.xib in Resources */,
+				7185EB211E2DE2CE0031AC9D /* CollectionCell.xib in Resources */,
 				715304C41E250B590025C38D /* pic-huapo1.png in Resources */,
 				715304E91E250E3C0025C38D /* pic-xinzang7.png in Resources */,
 				715304E31E250E3C0025C38D /* pic-xinzang1.png in Resources */,
@@ -1432,6 +1459,7 @@
 				718088F21E1BA37B0009C503 /* InformationViewController.m in Sources */,
 				712BCD851E0AA43F001F4A9A /* UIView+ZJFrame.m in Sources */,
 				711523D71E016E32000E2A42 /* SelfHelpmutualGuideViewController.m in Sources */,
+				7185EB251E2DEEDD0031AC9D /* ChangePasswordViewController.m in Sources */,
 				712BCDAE1E0ADE55001F4A9A /* VolunteerInquiriesModel.m in Sources */,
 				712BCD891E0AA43F001F4A9A /* ZJScrollPageView.m in Sources */,
 				719865451E23424B008E90B6 /* MyCollectionViewController.m in Sources */,
@@ -1456,6 +1484,7 @@
 				71B178641DFCDD0700FD77B6 /* GMLayoutRate.m in Sources */,
 				711D93301E02B852008D6C41 /* DisasterReliefMaterialInquiryCell.m in Sources */,
 				71B1786B1DFCE34800FD77B6 /* HomeViewController.m in Sources */,
+				7185EB201E2DE2CE0031AC9D /* CollectionCell.m in Sources */,
 				7167A9651E1F2A370074F371 /* DisasterWarningDetailViewController.m in Sources */,
 				71B178931DFCFA6E00FD77B6 /* DisasterWarningViewController.m in Sources */,
 				7167A9681E1F30CE0074F371 /* NSString+size.m in Sources */,
@@ -1471,6 +1500,7 @@
 				7182BFB41E0175D100BBF0D3 /* VolunteerInquiriesViewController.m in Sources */,
 				713A6BCE1E27838F00B7A89D /* ForgetPwdViewController.m in Sources */,
 				718088E51E1B56120009C503 /* CustomNaviViewController.m in Sources */,
+				7185EB0C1E2CCA0F0031AC9D /* KnowledgeCell.m in Sources */,
 				7167A9CC1E1FA0690074F371 /* EarthquakeViewController.m in Sources */,
 				711523EA1E017264000E2A42 /* RiskDistributionViewController.m in Sources */,
 				711523DB1E016FE9000E2A42 /* DisasterScienceKnowledgeViewController.m in Sources */,

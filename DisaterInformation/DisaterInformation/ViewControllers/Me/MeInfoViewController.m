@@ -9,6 +9,11 @@
 
 #import "MeInfoViewController.h"
 #import "InformationViewController.h"
+#import "AboutUsViewController.h"
+#import "FeedbackViewController.h"
+#import "MyCollectionViewController.h"
+#import "PasswordManagerViewController.h"
+
 static NSString *meCellIde = @"meCell";
 
 @interface MeInfoViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -31,7 +36,7 @@ static NSString *meCellIde = @"meCell";
 -(NSArray *)nameArray
 {
     if (!_nameArray) {
-        _nameArray = @[@"消息",@"通讯录",@"我的收藏",@"密码安全与管理",@"意见反馈",@"关于我们",@"版本更新"];
+        _nameArray = @[@"News",@"Contacts",@"Collection",@"Password management",@"Feedback",@"AboutUs",@"Version"];
     }
     return _nameArray;
 
@@ -39,7 +44,7 @@ static NSString *meCellIde = @"meCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"个人中心";
+    self.title = @"My Center";
     [self.view addSubview:self.tableView];
     self.tableView.tableFooterView = [[UIView alloc]init ];
 }
@@ -71,10 +76,56 @@ static NSString *meCellIde = @"meCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row == 0) {
         InformationViewController * ivc = [[InformationViewController alloc]init ];
-        [self.navigationController pushViewController:ivc animated:true];
+        ivc.title = self.nameArray[indexPath.row];
+        [self pushVC:ivc];
+    }else if (indexPath.row == 2){
+        MyCollectionViewController *mcvc = [[MyCollectionViewController alloc]init ];
+        mcvc.title = self.nameArray[indexPath.row];
+
+        [self pushVC:mcvc];
+    }else if(indexPath.row == 3){
+        PasswordManagerViewController *fvc = [[PasswordManagerViewController alloc]init ];
+        fvc.title = self.nameArray[indexPath.row];
+        [self pushVC:fvc];
+
+    }else if(indexPath.row == 4){
+        FeedbackViewController *fvc = [[FeedbackViewController alloc]init ];
+        fvc.title = self.nameArray[indexPath.row];
+
+        [self pushVC:fvc];
         
+    }else if (indexPath.row == 5){
+    
+        AboutUsViewController *avc = [[AboutUsViewController alloc]init ];
+        avc.title = self.nameArray[indexPath.row];
+
+        [self pushVC:avc];
     }
+    
+    
+    else{
+    
+        [self alter];
+    
+    }
+
 }
+
+-(void)alter
+{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Is the latest version" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction * ok = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.view endEditing:YES];
+    }];
+    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"UpDate" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self.view endEditing:YES];
+    }];
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section

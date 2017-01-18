@@ -99,8 +99,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-
-
     return 80;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -108,11 +106,27 @@
     return 0.1;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
 
-    return self.secontionTitles[section];
+    return 30;
 }
+
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, DEVICE_WIDTH, 30) ];
+    
+    UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(15, 5, DEVICE_WIDTH - 20, 20) ];
+    label.text = self.secontionTitles[section];
+    label.textColor = [UIColor colorWithRGBString:COLOR_BLACK_333333];
+    label.font = font14;
+    [headView addSubview:label];
+    return headView;
+}
+
+
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

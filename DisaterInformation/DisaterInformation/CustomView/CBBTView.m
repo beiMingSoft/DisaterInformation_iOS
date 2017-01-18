@@ -22,12 +22,8 @@
 - (void)setUpSubViews
 {
     self.text  = @"";
-    
-    
     [self setPlaceholder:@""];
     [self setPlaceholderColor:[UIColor lightGrayColor]];
-    
-    
 }
 
 - (void)setText:(NSString *)text {
@@ -41,7 +37,7 @@
         if ( _placeHolderLabel == nil )
         {
             _placeHolderLabel = [[UILabel alloc] initWithFrame:CGRectMake(8,8,self.bounds.size.width - 16,0)];
-            _placeHolderLabel.lineBreakMode = UILineBreakModeWordWrap;
+//            _placeHolderLabel.lineBreakMode = UILineBreakModeWordWrap;
             _placeHolderLabel.numberOfLines = 0;
             _placeHolderLabel.font = self.font;
             _placeHolderLabel.backgroundColor = [UIColor clearColor];

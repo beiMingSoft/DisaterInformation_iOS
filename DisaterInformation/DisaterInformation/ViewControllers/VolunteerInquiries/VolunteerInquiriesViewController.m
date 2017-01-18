@@ -95,6 +95,7 @@ static NSString *cellIde = @"volunteerCell";
                 switch (index) {
             case 0:
                         isPerson = NO;
+                        [self.screenView removeFromSuperview];
                         self.navigationItem.hidesBackButton = YES;
                         self.navigationItem.rightBarButtonItem.customView.hidden=YES;
                 break;
@@ -155,7 +156,7 @@ static NSString *cellIde = @"volunteerCell";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //  return   GMLAYOUTRATE(90);
-    return 90;
+    return 100;
 }
 
 
@@ -186,12 +187,15 @@ static NSString *cellIde = @"volunteerCell";
     NSArray *titles = @[@"Medicine",@"Teach",@"Doctor",@"Repair",@"Welder"];
     if (!_screenView) {
         _screenView  = [[UIView alloc]initWithFrame:CGRectMake(DEVICE_WIDTH - 100, 64, 100, titles.count * 30) ];
-        _screenView.backgroundColor = [UIColor colorWithRed:128/255 green:128/255 blue:128/255 alpha:0.7];
+        _screenView.backgroundColor = [UIColor colorWithRGBString:COLOR_009fe8];
+        _screenView.alpha = 0.8;
+//        [UIColor colorWithRed:102/255 green:102/255 blue:102/255 alpha:0.8];
         for (int i = 0 ; i < titles.count ; i++) {
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             button.frame = CGRectMake(0,  30 * i, 100, 30);
             [button setTitle:titles[i] forState:UIControlStateNormal];
             button.tag = 9999 + i;
+            button.titleLabel.font = font14;
             [button addTarget:self action:@selector(screenAction:) forControlEvents:UIControlEventTouchUpInside];
             [_screenView addSubview:button];
             

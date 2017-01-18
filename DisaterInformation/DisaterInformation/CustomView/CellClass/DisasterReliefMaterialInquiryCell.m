@@ -27,7 +27,11 @@
     self.MaterialsNameLabel.text = model.MaterialsName;
     self.MaterialsAddressLabel.text = model.MaterialsAddress;
     self.checkTimeLabel.text = model.CheckTime;
-    self.numberLabel.text = [NSString stringWithFormat:@"Total %ld box",model.MaterialsNumbers];
+    NSString *str = [NSString stringWithFormat:@"%ld box",model.MaterialsNumbers];
+    NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc]initWithString: str ];
+    NSRange range = NSMakeRange(0, 4);
+    [attribute addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:range];
+    self.numberLabel.attributedText = attribute;
     self.MaterialsImageView.image = [UIImage imageNamed:model.urlImage];
 
 }

@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Details of Early Warning Notice";
+    self.title = @"Detail";
     self.dataArray = @[@"The next 12 hours I will appear on the road influential traffic icing, accompanied by snow.",@"  Fangchenggang City Meteorological Station 2016 at 8:30 on December 29 to continue to release the wind blue warning signal: by the cold air, is expected within the next 24 hours Fangchenggang coastal and coastal sea will appear 5-6, gust 7 of the partial North wind, please pay attention to prevention。",@" According to the Yunnan Seismological Network measured: in 2016 November, Yunnan and the surrounding area (latitude 20 ° ~ 30 °, longitude 96 ° ~ 107 °) 812 times the total earthquake. According to M statistics, M0.0 ~ 0.9 615 times, M1.0 ~ 1.9 171, M2.0 ~ 2.9 20 times, M3.0 ~ 3.9 3 times, M4.0 ~ 4.9 3 times, The region's largest earthquake and the province's largest earthquake were at 12:22 on November 17, Yunnan Mikawa M4.4 earthquake. (Note: M is the national standard magnitude"];
     [self createTextView];
     
@@ -38,7 +38,8 @@
     UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(10, 10, DEVICE_WIDTH - 20, 40)];
     titleLabel.font = font14;
     titleLabel.textColor = [UIColor colorWithRGBString:COLOR_BLACK_333333];
-    titleLabel.text = self.title;
+    titleLabel.text = self.mainTitle;
+    titleLabel.numberOfLines = 0;
     titleLabel.textAlignment = NSTextAlignmentCenter;
     [backView addSubview:titleLabel];
     
